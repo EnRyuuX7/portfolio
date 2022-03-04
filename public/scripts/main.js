@@ -1,3 +1,21 @@
+// 	/*----------------------------------------------------*/
+// 	/*	Modal Popup
+// 	------------------------------------------------------*/
+//   $('.item-wrap a').magnificPopup({
+
+//     type:'inline',
+//     fixedContentPos: false,
+//     removalDelay: 300,
+//     showCloseBtn: false,
+//     mainClass: 'mfp-fade'
+
+//  });
+
+//  $(document).on('click', '.popup-modal-dismiss', function (e) {
+//    e.preventDefault();
+//    $.magnificPopup.close();
+//  });
+
 var ballCanvas;
 
 window.onload = function () {
@@ -12,7 +30,7 @@ function skillPercentage() {
     var sp = document.getElementsByClassName("skill-progress");
 
     for (var i = 0; i < sk.length; i++) {
-        // console.log(sk[i].getAttribute("data-percentage"));
+        console.log(sk[i].getAttribute("data-percentage"));
         var percentage = sk[i].getAttribute("data-percentage");
         let width = "Width: " + sp.offsetHeight + "px";
         var a = Math.min(100, Math.max(0, percentage)),
