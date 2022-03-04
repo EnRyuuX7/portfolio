@@ -1,21 +1,3 @@
-// 	/*----------------------------------------------------*/
-// 	/*	Modal Popup
-// 	------------------------------------------------------*/
-//   $('.item-wrap a').magnificPopup({
-
-//     type:'inline',
-//     fixedContentPos: false,
-//     removalDelay: 300,
-//     showCloseBtn: false,
-//     mainClass: 'mfp-fade'
-
-//  });
-
-//  $(document).on('click', '.popup-modal-dismiss', function (e) {
-//    e.preventDefault();
-//    $.magnificPopup.close();
-//  });
-
 var ballCanvas;
 
 window.onload = function () {
@@ -23,37 +5,7 @@ window.onload = function () {
     ballCanvas.redraw(window.innerWidth, window.innerHeight);
 
     skillPercentage();
-
-    // document.querySelector(".smoothscroll").addEventListener("click", function (e) {
-    //     window.scrollTo({
-    //         top: 0,
-    //         behavior: "smooth",
-    //     });
-    // });
 };
-
-// function smoothScroll() {
-//     document.querySelector(".smoothscroll").addEventListener("click", function (e) {
-//         e.preventDefault();
-
-//         var target = this.hash,
-//             $target = document.querySelector(target);
-
-//         document
-//             .querySelector("html, body")
-//             .stop()
-//             .animate(
-//                 {
-//                     scrollTop: $target.offset().top,
-//                 },
-//                 800,
-//                 "swing",
-//                 function () {
-//                     window.location.hash = target;
-//                 }
-//             );
-//     });
-// }
 
 function skillPercentage() {
     var sk = document.getElementsByClassName("single-skill");

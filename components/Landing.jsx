@@ -7,7 +7,7 @@ const Landing = () => (
     <section id='landing'>
         <div className="row">
             <div className="container">
-                <div className="title"><span>Abhishek Pandey</span><span>UI/UX Designer and<a className="p-link" target="_blank" href="https://enryuux7.github.io">Web Developer</a></span></div>
+                <div className="title"><span>Abhishek Pandey</span><span>UI/UX Designer and<a className="p-link" target="_blank" rel="noreferrer" href="https://enryuux7.github.io">Web Developer</a></span></div>
             </div>
             <div className="container">
                 <ul className="intro-social">
