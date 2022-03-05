@@ -1,29 +1,6 @@
 $color1: #1ce2c8;
 $color2: #cc005f;
 
-#skills h1 {
-    margin: 2em auto 0;
-    font: 700 3em "Poppins", sans-serif;
-    color: #f1f5f6;
-    text-align: center;
-}
-
-#skills h5 {
-    margin: 0 auto 2em;
-    font: 400 1.3em "Poppins", sans-serif;
-    color: #f1f5f6;
-    text-align: center;
-}
-
-#skills a {
-    text-decoration: none;
-}
-
-#skills {
-    min-height: 65vh;
-    margin-top: 10%;
-}
-
 $gradient: (
     1: "#f3f9a6 0%, #cbc634 100%",
     2: "#ff616d 0%, #ffc171 100%",
@@ -54,11 +31,42 @@ $gradient: (
 .skillTable {
     display: grid;
     grid-template-columns: repeat(5, 200px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
     grid-gap: 10px;
     margin: auto;
     max-width: 1200px;
     justify-content: center;
+}
+
+@media (max-width: 1290px) {
+    .skillTable {
+        grid-template-columns: repeat(4, 200px);
+        grid-template-rows: repeat(4, 100px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .skillTable {
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: repeat(4, 100px);
+    }
+}
+
+@media (max-width: 780px) {
+    .skillTable {
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(5, 100px);
+    }
+}
+
+@media (max-width: 412px) {
+    .skillTable {
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(5, 100px);
+    }
+    .title {
+        font-size: 18px;
+    }
 }
 
 .skillElement {
@@ -83,24 +91,6 @@ $gradient: (
         font: 500 12px "Poppins", sans-serif;
         margin-top: -0.2em;
     }
-    // &:after {
-    //     z-index: 10;
-    //     content: attr(data-description);
-    //     background: #f9f8f7;
-    //     color: #333;
-    //     width: 180px;
-    //     position: absolute;
-    //     top: 80%;
-    //     opacity: 0;
-    //     transition: opacity 0.3s ease 0.3s, top 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
-    //     height: auto;
-    //     font-size: 12px;
-    //     line-height: 1.4;
-    //     padding: 10px;
-    //     margin: 0 0 0 -50px;
-    //     border-radius: 6px;
-    //     text-align: center;
-    // }
     &:hover {
         transform: scale(1.12);
         z-index: 10;

@@ -235,7 +235,7 @@
 
 #landing .title span {
     display: inline-block;
-    font-size: 5vw;
+    font-size: 10vmin;
     color: #efefef;
     width: 100%;
     text-transform: uppercase;
@@ -553,59 +553,19 @@
     }
 }
 
-/* #skills {
+#skills {
     min-height: 65vh;
-    margin-top: 10%;
-} */
-/* 
-/* .skills-section .single-skill .skill-progress .progress-bar {
-    background-color: #1ce2c8;
+    padding: 8% 0 15% 0;
+}
+#skills .section-description {
+    padding-top: 80px;
 }
 
-#skills .skills-section .single-skill:not(:last-child) {
-    margin-bottom: 42px;
-}
-
-#skills .skills-section .single-skill .skill-info {
-    -ms-flex-pack: justify;
-    color: #cecece;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 16px;
-    justify-content: space-between;
-    margin-bottom: 4px;
-}
-
-#skills .skills-section .single-skill .skill-info .skill-name {
-    display: inline-block;
-    margin-right: 12px;
-    white-space: nowrap;
-}
-
-#skills .skills-section .single-skill .skill-progress {
-    background-color: #2f2f2f;
-    border-radius: 1px;
-    font-size: 15px;
-    height: 9px;
-    overflow: visible;
-}
-
-#skills .skills-section .single-skill .skill-progress .progress-bar {
-    height: 100%;
-    border-bottom-left-radius: 1px;
-    border-top-left-radius: 1px;
-}
-
-@media (max-width: 767.98px) {
-    #skills .skills-section .single-skill:not(:last-child) {
-        margin-bottom: 40px !important;
+@media (max-width: 412px) {
+    #skills {
+        padding: 50% 0 15% 0;
     }
-
-    #skills .skills-section [class*="col-"]:not(:last-child) .single-skill {
-        margin-bottom: 40px !important;
-    }
-} */
-
+}
 #portfolio {
     /* background: #FFFFFF; */
     /* padding-top: 12rem; */
