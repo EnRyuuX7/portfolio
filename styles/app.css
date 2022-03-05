@@ -553,12 +553,12 @@
     }
 }
 
-#skills {
+/* #skills {
     min-height: 65vh;
     margin-top: 10%;
-}
-
-.skills-section .single-skill .skill-progress .progress-bar {
+} */
+/* 
+/* .skills-section .single-skill .skill-progress .progress-bar {
     background-color: #1ce2c8;
 }
 
@@ -604,7 +604,7 @@
     #skills .skills-section [class*="col-"]:not(:last-child) .single-skill {
         margin-bottom: 40px !important;
     }
-}
+} */
 
 #portfolio {
     /* background: #FFFFFF; */
@@ -733,10 +733,11 @@
     -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     position: relative;
+    left: -100%;
 }
 
 .toggle-cell {
-    left: 0%;
+    left: 0% !important;
 }
 
 #portfolio .folio-title {

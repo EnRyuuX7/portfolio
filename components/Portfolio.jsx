@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Portfolio = () => {
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(true)
     return (
         <section id="portfolio">
 
@@ -32,7 +32,7 @@ const Portfolio = () => {
                                 <img src="/design.jpg" alt="Generative Art USing p5.js" className="centered" />
                                 <a href="https://enryuux7.github.io" className={`overlay ${toggle && 'toggle-overlay'}`}>
                                     <div className="folio-item-table">
-                                        <div id="item-cell" className="folio-item-cell">
+                                        <div id="item-cell" className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
                                             <h3 className="folio-title">Generative Art USing p5.js</h3>
                                             <span className="folio-types">
                                                 Graphic Design
@@ -46,9 +46,9 @@ const Portfolio = () => {
                         <div className="one-half column folio-item">
                             <div className="item-wrap">
                                 <img src="/cursor.png" alt="Cursor Port" className="centered" />
-                                <a href="https://www.deviantart.com/en-ryuu/art/Breeze-Hacked-Cursor-For-Windows-752551821" className="overlay toggle-overlay">
+                                <a href="https://www.deviantart.com/en-ryuu/art/Breeze-Hacked-Cursor-For-Windows-752551821" className={`overlay ${toggle && 'toggle-overlay'}`}>
                                     <div className="folio-item-table">
-                                        <div className="folio-item-cell toggle-cell">
+                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
                                             <h3 className="folio-title">Breeze Hacked Cursor imported from Linux</h3>
                                             <span className="folio-types">
                                                 Cursor porting
@@ -62,9 +62,9 @@ const Portfolio = () => {
                         <div className="one-half column folio-item nomargin">
                             <div className="item-wrap">
                                 <img src="/lost-ravens.png" alt="lostravens" className="centered" />
-                                <a href="#modal-04" className="overlay toggle-overlay">
+                                <a href="#modal-04" className={`overlay ${toggle && 'toggle-overlay'}`}>
                                     <div className="folio-item-table">
-                                        <div className="folio-item-cell toggle-cell">
+                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
                                             <h3 className="folio-title">Lost Ravens EPK</h3>
                                             <span className="folio-types">
                                                 Web-Design Music portfolio
@@ -78,9 +78,9 @@ const Portfolio = () => {
                         <div className="one-half column folio-item">
                             <div className="item-wrap">
                                 <img src="/covidx.png" alt="CovidX" className="centered" />
-                                <a href="https://github.com/Thunderk3g/COVID-X-v2.0" className="overlay toggle-overlay">
+                                <a href="https://github.com/Thunderk3g/COVID-X-v2.0" className={`overlay ${toggle && 'toggle-overlay'}`}>
                                     <div className="folio-item-table">
-                                        <div className="folio-item-cell toggle-cell">
+                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
                                             <h3 className="folio-title">CovidX v2.0</h3>
                                             <span className="folio-types">
                                                 Web Development
@@ -93,9 +93,9 @@ const Portfolio = () => {
                         <div className="one-half column folio-item nomargin">
                             <div className="item-wrap">
                                 <img src="/shapeup.png" alt="Shape-Up" className="centered" />
-                                <a href="https://github.com/EnRyuuX7/shape-up" className="overlay toggle-overlay">
+                                <a href="https://github.com/EnRyuuX7/shape-up" className={`overlay ${toggle && 'toggle-overlay'}`}>
                                     <div className="folio-item-table">
-                                        <div className="folio-item-cell toggle-cell">
+                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
                                             <h3 className="folio-title">Shape-Up - 2D platformer</h3>
                                             <span className="folio-types">
                                                 Unity Game Development
@@ -109,9 +109,9 @@ const Portfolio = () => {
                         <div className="one-half column folio-item">
                             <div className="item-wrap">
                                 <img src="/notes.png" alt="Transparent notes" />
-                                <a href="https://www.deviantart.com/en-ryuu/art/Transparent-Notes-2-0-764915350" className="overlay toggle-overlay">
+                                <a href="https://www.deviantart.com/en-ryuu/art/Transparent-Notes-2-0-764915350" className={`overlay ${toggle && 'toggle-overlay'}`}>
                                     <div className="folio-item-table">
-                                        <div className="folio-item-cell toggle-cell">
+                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
                                             <h3 className="folio-title">Transparent notes 2.0</h3>
                                             <span className="folio-types">
                                                 Rainmeter Skin - Customization
