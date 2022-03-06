@@ -302,6 +302,8 @@
     }
 }
 
+/* About Section
+-------------------------------------------------------*/
 #about {
     color: #efefef;
     padding-top: 5rem;
@@ -313,6 +315,8 @@
     text-align: center;
 }
 
+/* Landing Section
+-------------------------------------------------------*/
 #landing {
     padding: 0 0 10% 0;
 }
@@ -376,6 +380,8 @@
     animation: linkAfter 0.5s 1s ease both;
 }
 
+/* Title and info css Section
+-------------------------------------------------------*/
 .section-intro h1 {
     text-align: center;
     font-family: "poppins-semibold", serif;
@@ -427,7 +433,7 @@
 
 .section-heading {
     margin-bottom: 50px;
-    margin-top: 10%;
+    margin-top: 6%;
     text-align: left;
 }
 
@@ -443,7 +449,7 @@
 }
 
 .section-heading.page-heading {
-    margin-bottom: 83px;
+    /* margin-bottom: 83px; */
     text-align: center;
 }
 
@@ -549,7 +555,8 @@
         font-size: 36px;
     }
 }
-
+/* Resume Section
+-------------------------------------------------------*/
 #resume {
     min-height: 90vh;
 }
@@ -667,7 +674,7 @@
 
 #skills {
     min-height: 65vh;
-    padding: 8% 0 15% 0;
+    padding: 0 0 10% 0;
 }
 #skills .section-description {
     padding-top: 80px;
@@ -678,10 +685,21 @@
         padding: 50% 0 15% 0;
     }
 }
+
+/* Portfolio Section
+-------------------------------------------------------*/
 #portfolio {
     /* background: #FFFFFF; */
     /* padding-top: 12rem; */
     padding-bottom: 12rem;
+    min-height: 200vh;
+}
+
+@media only screen and (max-width: 1080px) {
+    #portfolio {
+        min-height: 340vh;
+        /* padding-bottom: 80%; */
+    }
 }
 
 .portfolio-wrapper {
@@ -760,6 +778,7 @@
     padding: 5% 0 0 0;
     position: relative;
     overflow: hidden;
+    max-height: 80vw;
 }
 
 #portfolio a:after {
@@ -844,11 +863,8 @@
     display: none;
 }
 
-/**
- * responsive:
- * portfolio
- * ------------------------------------------------------------------- 
- */
+/* Portfolio responsive
+-------------------------------------------------------*/
 @media only screen and (max-width: 1024px) {
     #portfolio .folio-title {
         font-size: 3.1rem;
@@ -862,6 +878,18 @@
 @media only screen and (max-width: 400px) {
     #portfolio .folio-title {
         font-size: 2.2rem;
+    }
+}
+
+/* Contact Section
+-------------------------------------------------------*/
+#contact {
+    min-height: 100vh;
+}
+
+@media only screen and (max-width: 1080px) {
+    #contact {
+        padding: 10% 0 0 0;
     }
 }
 

@@ -5,7 +5,7 @@ import { FaEnvelope } from "react-icons/fa";
 
 const Contact = () => (
     // < !--Contact container-->
-    <section id="contact" data-simplebar>
+    <section id="contact">
         <div className="section-heading page-heading column">
             <h2 className="section-title">Get in Touch</h2>
             <div className="animated-bar"></div>
