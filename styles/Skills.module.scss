@@ -2,23 +2,23 @@ $color1: #1ce2c8;
 $color2: #cc005f;
 
 $gradient: (
-    1: "#f3f9a6 0%, #cbc634 100%",
-    2: "#ff616d 0%, #ffc171 100%",
-    3: "#37cfdc 0%, #5a88e5 100%",
-    4: "#58ac30 0%, #a7df62 100%",
-    5: "#3771dc 0%, #785ae5 100%",
-    6: "#785ae5 0%, #f3f9a6 100%",
-    7: "#a7df62 0%, #3771dc 100%",
-    8: "#5a88e5 0%, #58ac30 100%",
+    1: "#f3f9a6 50%, #cbc634 100%",
+    2: "#ff616d 50%, #ffc171 100%",
+    3: "#37cfdc 50%, #5a88e5 100%",
+    4: "#58ac30 50%, #a7df62 100%",
+    5: "#3771dc 50%, #785ae5 100%",
+    6: "#785ae5 50%, #f3f9a6 100%",
+    7: "#a7df62 50%, #3771dc 100%",
+    8: "#5a88e5 50%, #58ac30 100%",
     9: "#ffc171 50%, #37cfdc 100%",
-    10: "#cbc634 0%, #ff616d 100%",
+    10: "#cbc634 50%, #ff616d 100%",
 );
 
 @each $i, $value in $gradient {
     $color: unquote($value);
     .gra#{$i} {
         background: linear-gradient(var(--angle), $color);
-        animation: spins 5s linear infinite;
+        animation: spins 4s linear infinite;
         .title,
         .description {
             background: -webkit-linear-gradient(var(--angle), $color);

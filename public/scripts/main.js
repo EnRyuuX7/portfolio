@@ -1,21 +1,3 @@
-// 	/*----------------------------------------------------*/
-// 	/*	Modal Popup
-// 	------------------------------------------------------*/
-//   $('.item-wrap a').magnificPopup({
-
-//     type:'inline',
-//     fixedContentPos: false,
-//     removalDelay: 300,
-//     showCloseBtn: false,
-//     mainClass: 'mfp-fade'
-
-//  });
-
-//  $(document).on('click', '.popup-modal-dismiss', function (e) {
-//    e.preventDefault();
-//    $.magnificPopup.close();
-//  });
-
 var ballCanvas;
 
 window.onload = function () {
@@ -154,28 +136,6 @@ function spawnBalls() {
 
 function generateDecimalBetween(minimum, maximum) {
     return (Math.random() * (minimum - maximum) + maximum).toFixed(2);
-}
-
-document.addEventListener(
-    "click",
-    function (evt) {
-        spawnBallsFromClick(evt.x, evt.y);
-    },
-    false
-);
-
-document.addEventListener(
-    "touchstart",
-    function (evt) {
-        spawnBallsFromClick(evt.touches[0].pageX, evt.touches[0].pageY);
-    },
-    false
-);
-
-function spawnBallsFromClick(x, y) {
-    for (var i = 0; i < 3; i++) {
-        new bouncyBall(x, y);
-    }
 }
 
 window.requestAnimFrame = (function () {
