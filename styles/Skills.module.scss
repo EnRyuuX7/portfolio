@@ -17,10 +17,11 @@ $gradient: (
 @each $i, $value in $gradient {
     $color: unquote($value);
     .gra#{$i} {
-        background: linear-gradient(to bottom right, $color);
+        background: linear-gradient(var(--angle), $color);
+        animation: spins 5s linear infinite;
         .title,
         .description {
-            background: -webkit-linear-gradient($color);
+            background: -webkit-linear-gradient(var(--angle), $color);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -29,6 +30,7 @@ $gradient: (
 }
 
 .skillTable {
+    --angle: 0deg;
     display: grid;
     grid-template-columns: repeat(5, 200px);
     grid-template-rows: repeat(2, 100px);
@@ -36,6 +38,7 @@ $gradient: (
     margin: auto;
     max-width: 1200px;
     justify-content: center;
+    animation: spins 1s linear infinite;
 }
 
 @media (max-width: 1290px) {
@@ -120,5 +123,15 @@ a.skillElement {
     &2 {
         grid-column: 1;
         grid-row: 4;
+    }
+}
+
+$j: 0;
+@keyframes spins {
+    @for $i from 0 through 100 {
+        #{$i}% {
+            --angle: #{$j}deg;
+        }
+        $j: $j + 3.6;
     }
 }

@@ -1,11 +1,9 @@
 import Navbar from "./shared/Navbar";
-import Head from "next/head";
+import Script from "next/script";
 
 const Layout = ({ children }) => (
   <div>
-    <Head>
-      <script type="text/javascript" src="/scripts/main.js"></script>
-    </Head>
+    <Script src="/scripts/main.js"></Script>
     <Navbar />
     <canvas id="bouncyBall"></canvas>
     <div className="main-container container">{children}</div>
