@@ -21,7 +21,7 @@ const Footer = () => (
 
                 <div className="one-half column">
                     <div className="copyright">
-                        <span>Made my Abhishek Pandey</span>
+                        <span>Made by Abhishek Pandey</span>
                     </div>
                 </div>
 

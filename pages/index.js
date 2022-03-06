@@ -2,7 +2,7 @@
 
 import Layout from "../components/Layout";
 import Landing from "../components/Landing";
-import Main from "../components/Main";
+import About from "../components/About";
 import Resume from "../components/Resume";
 import Skills from "../components/Skills";
 import Portfolio from "../components/Portfolio";
@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <Layout>
             <Landing> </Landing>
-            <Main> </Main>
+            <About> </About>
             <Resume> </Resume>
             <Skills> </Skills>
             <Portfolio> </Portfolio>

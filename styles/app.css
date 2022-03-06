@@ -83,6 +83,10 @@
         transition-duration: 0.5s;
     }
 
+    .wrapper.show {
+        background-color: rgb(0, 0, 0, 1);
+    }
+
     .nav-items {
         min-width: 100vw;
         flex-direction: column;
@@ -561,15 +565,15 @@
     margin-top: 0%;
 }
 
-#resume .resume-section .col-block.education {
+#resume .resume-section .education {
     margin-right: 0px;
 }
 
-#resume .resume-section .col-block.experience {
+#resume .resume-section .experience {
     margin-left: 0px;
 }
 
-#resume .resume-section .col-title {
+#resume .resume-section .resume-title {
     font-size: 26px;
     margin-bottom: 20px;
 }
@@ -646,17 +650,17 @@
         padding-right: 20px;
     }
 
-    #resume .resume-section .col-block.education,
-    #resume .resume-section .col-block.experience {
+    #resume .resume-section .education,
+    #resume .resume-section .experience {
         margin-left: 0;
         margin-right: 0;
     }
 
-    #resume .resume-section .col-12:last-child .resume-item:last-child {
+    #resume .resume-section .resume-item:last-child {
         margin-bottom: 0;
     }
 
-    #resume .resume-section .col-12:first-child .resume-item:last-child {
+    #resume .resume-section .resume-item:last-child {
         margin-bottom: 60px;
     }
 }
