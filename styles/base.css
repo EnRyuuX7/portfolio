@@ -324,6 +324,12 @@ span {
     user-select: none;
 }
 
+@media screen and (max-width: 500px) {
+    section {
+        padding-top: 50px;
+    }
+}
+
 .h1,
 .h2,
 .h3,
