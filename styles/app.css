@@ -1099,12 +1099,12 @@
 
 #contact .contact-section .contact-info .list-info .info-details .info-value a {
     color: #9f9f9f !important;
+    text-transform: lowercase;
 }
 
 @media only screen and (max-width: 400px) {
     #contact .contact-section .contact-info .list-info .info-details .info-value a {
-        letter-spacing: normal;
-        text-transform: normal;
+        letter-spacing: lowercase;
     }
 }
 
