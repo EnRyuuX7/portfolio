@@ -878,7 +878,7 @@
         font-size: 2.5rem;
     }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     #portfolio .folio-title {
         font-size: 1.8rem;
         padding: 0%;
@@ -937,7 +937,7 @@
     margin-left: 4%;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     #contact .c-email {
         margin-left: 0%;
     }
@@ -986,6 +986,8 @@
 
 #contact .contact-section .contact-form .form-group.form-message #contact-message {
     height: auto;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 #contact .contact-section .contact-form .form-submit #contact-submit {
@@ -1064,7 +1066,7 @@
     position: relative;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     #contact .contact-section .contact-info .list-info .info-icon {
         font-size: 24px;
         margin: 10px 10px 0 0;
@@ -1102,7 +1104,7 @@
     text-transform: lowercase;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     #contact .contact-section .contact-info .list-info .info-details .info-value a {
         letter-spacing: normal;
     }
@@ -1187,7 +1189,7 @@ footer .copyright span {
     display: inline-block;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     footer .copyright span {
         padding-top: 20%;
     }
@@ -1260,4 +1262,17 @@ footer .copyright span:last-child::after {
 }
 #go-top a:hover {
     background: #000000;
+}
+
+@media only screen and (max-width: 500px) {
+    #resume {
+        min-height: 105vh;
+    }
+    #contact {
+        padding-top: 50px;
+    }
+    #portfolio {
+        min-height: 280vh;
+        padding-bottom: 5%;
+    }
 }
