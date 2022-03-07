@@ -1104,7 +1104,7 @@
 
 @media only screen and (max-width: 400px) {
     #contact .contact-section .contact-info .list-info .info-details .info-value a {
-        letter-spacing: lowercase;
+        letter-spacing: normal;
     }
 }
 
