@@ -10,8 +10,6 @@ const Skills = () => {
                 </div>
                 <div className="container">
                     <div className={styles.skillTable}>
-                        {/* <div className={styles.emptySpacer1}></div>
-                        <div className={styles.emptySpacer2}></div> */}
                         <div className={`${styles.skillElement}  ${styles.gra1}`} data-description="HTML">
                             <div className={styles.skillElementInner}>
                                 <div className={styles.title}>Html</div>
@@ -75,8 +73,11 @@ const Skills = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.card}></div>
-
+            {/* <div className="row button-section">
+                <div className="container">
+                    <a href="#" title="Download CV" className="button button-primary">Download CV</a>
+                </div>
+            </div> */}
         </section >
     )
 };

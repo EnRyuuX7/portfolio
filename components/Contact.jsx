@@ -4,7 +4,6 @@ import { FaPhone } from "react-icons/fa"
 import { FaEnvelope } from "react-icons/fa";
 
 const Contact = () => (
-    // < !--Contact container-->
     <section id="contact">
         <div className="section-heading page-heading column">
             <h2 className="section-title">Get in Touch</h2>
@@ -12,7 +11,6 @@ const Contact = () => (
         </div>
         <div className="contact-section single-section">
             <div className="row">
-                {/* <!-- Contact form--> */}
                 <div className="two-thirds column">
                     <form className="contact-form" id="contact-form"
                         action="#">
@@ -42,8 +40,6 @@ const Contact = () => (
                 <div className="one-third column">
                     <div className="contact-info">
                         <h4 className="content-title">Contact Info</h4>
-                        {/* <p className="info-description">Always available for freelance work if the right project comes along,
-                            Feel free to contact me!</p> */}
                         <ul className="list-unstyled list-info">
                             <li className="nomargin">
                                 <div className="media align-items-center"><span className="info-icon"><FaUser></FaUser></span>

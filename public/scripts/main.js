@@ -3,29 +3,7 @@ var ballCanvas;
 window.onload = function () {
     ballCanvas = new ballCanvas();
     ballCanvas.redraw(window.innerWidth, window.innerHeight);
-
-    skillPercentage();
 };
-
-function skillPercentage() {
-    var sk = document.getElementsByClassName("single-skill");
-    var sp = document.getElementsByClassName("skill-progress");
-
-    for (var i = 0; i < sk.length; i++) {
-        console.log(sk[i].getAttribute("data-percentage"));
-        var percentage = sk[i].getAttribute("data-percentage");
-        let width = "Width: " + sp.offsetHeight + "px";
-        var a = Math.min(100, Math.max(0, percentage)),
-            t = width,
-            j = t - t * (a / 100);
-
-        sk[i].querySelector(".skill-percentage").textContent = a + "%";
-        sk[i].querySelector(".skill-percentage").style.margin.right = j;
-
-        sk[i].querySelector(".progress-bar").setAttribute("aria-valuenow", a);
-        sk[i].querySelector(".progress-bar").style.width = a + "%";
-    }
-}
 
 function ballCanvas() {
     this.bouncyBallList = [];
