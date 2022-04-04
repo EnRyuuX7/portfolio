@@ -129,7 +129,7 @@ a.skillElement {
 $j: 0;
 @keyframes spins {
     @for $i from 0 through 100 {
-        #{`$i}% {
+        #{$i}% {
             --angle: #{$j}deg;
         }
         $j: $j + 3.6;

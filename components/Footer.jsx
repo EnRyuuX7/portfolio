@@ -19,7 +19,7 @@ const Footer = () => (
 
                 </div>
 
-                <div className="one-half column">
+                <div className="one-half column right_aligned">
                     <div className="copyright">
                         <span>Made by Abhishek Pandey</span>
                     </div>

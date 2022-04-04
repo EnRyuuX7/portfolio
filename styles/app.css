@@ -320,7 +320,7 @@
 /* Landing Section
 -------------------------------------------------------*/
 #landing {
-    padding: 0 0 10% 0;
+    padding: 0 0 5rem 0;
 }
 
 #landing {
@@ -435,7 +435,6 @@
 
 .section-heading {
     margin-bottom: 50px;
-    margin-top: 6%;
     text-align: left;
 }
 
@@ -560,7 +559,7 @@
 /* Resume Section
 -------------------------------------------------------*/
 #resume {
-    min-height: 90vh;
+    padding: 5rem 0 0 0;
 }
 
 @media only screen and (max-width: 580px) {
@@ -675,8 +674,7 @@
 }
 
 #skills {
-    min-height: 65vh;
-    padding: 0 0 10% 0;
+    padding: 0 0 5rem 0;
 }
 #skills .section-description {
     padding-top: 80px;
@@ -691,17 +689,7 @@
 /* Portfolio Section
 -------------------------------------------------------*/
 #portfolio {
-    /* background: #FFFFFF; */
-    /* padding-top: 12rem; */
-    padding-bottom: 12rem;
-    min-height: 200vh;
-}
-
-@media only screen and (max-width: 1080px) {
-    #portfolio {
-        min-height: 320vh;
-        /* padding-bottom: 80%; */
-    }
+    padding: 8rem 0 5rem 0;
 }
 
 .portfolio-wrapper {
@@ -766,6 +754,12 @@
     border-color: red;
 }
 
+#folio-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4em;
+}
+
 .toggle-overlay {
     background: rgba(0, 0, 0, 0.8) !important;
 }
@@ -777,7 +771,7 @@
 }
 
 #portfolio .folio-item {
-    padding: 5% 0 0 0;
+    padding: 0 0 0 0;
     position: relative;
     overflow: hidden;
     max-height: 80vw;
@@ -893,13 +887,7 @@
 /* Contact Section
 -------------------------------------------------------*/
 #contact {
-    min-height: 100vh;
-}
-
-@media only screen and (max-width: 1080px) {
-    #contact {
-        padding: 10% 0 0 0;
-    }
+    padding: 5rem 0 5rem 0;
 }
 
 #contact .contact-section address,
@@ -1147,10 +1135,14 @@
 
 footer {
     bottom: 0%;
-    padding-bottom: 3rem;
+    padding: 5rem 0 3rem 0;
     font-size: 1.4rem;
     font-family: "poppins-regular", sans-serif;
     color: #cecece;
+}
+
+footer .container {
+    margin-left: 0;
 }
 footer a,
 footer a:visited {
@@ -1167,15 +1159,15 @@ footer .social {
     text-align: right;
 }
 footer .footer-social {
-    max-width: 100%;
+    width: auto;
     display: inline-block;
     font-size: 2.1rem;
     margin: 0;
     padding: 0;
-    padding-top: 40%;
     position: relative;
     top: -0.3rem;
 }
+
 footer .footer-social li {
     display: inline-block;
     margin: 0 12px;
@@ -1184,8 +1176,8 @@ footer .footer-social li {
 footer .footer-social li a {
     color: #cecece;
 }
+
 footer .copyright span {
-    padding-top: 40%;
     display: inline-block;
 }
 
@@ -1264,7 +1256,7 @@ footer .copyright span:last-child::after {
     background: #000000;
 }
 
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) {
     #resume {
         min-height: 105vh;
     }
@@ -1275,4 +1267,4 @@ footer .copyright span:last-child::after {
         min-height: 280vh;
         padding-bottom: 5%;
     }
-}
+} */

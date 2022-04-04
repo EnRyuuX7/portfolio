@@ -26,7 +26,7 @@ ballCanvas.prototype.redraw = function (width, height) {
 ballCanvas.prototype.animate = function () {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     ballCanvas.bouncyBallList.forEach(function (ball) {
-        all.update();
+        ball.update();
     });
     requestAnimFrame(this.animate.bind(this));
 };

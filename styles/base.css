@@ -2,9 +2,12 @@ body,
 html {
     margin: 0;
     font: bold 14px/1.4 "Open Sans", arial, sans-serif;
-    background: #000;
+    /* background: #000; */
     overflow-x: hidden;
     scroll-behavior: smooth;
+}
+html {
+    background: radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
 }
 
 body::-webkit-scrollbar {
@@ -211,9 +214,19 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-.aligned {
+/* Clearing
+********************************************************************* */
+.container:after,
+.row:after,
+.u-cf {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.right_aligned {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -242,6 +255,12 @@ body::-webkit-scrollbar-thumb {
     margin-right: auto;
     width: 100%;
     object-fit: cover;
+}
+
+.aligned {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 450px) {
@@ -313,7 +332,7 @@ a:hover:after {
     border: 0;
 }
 
-i.icon {
+i .icon {
     line-height: 100%;
 }
 

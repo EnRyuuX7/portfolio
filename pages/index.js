@@ -14,7 +14,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Abhishek`&apos;`s Portfolio</title>
+                <title>Abhishek&apos;s Portfolio</title>
             </Head>
             <Layout>
                 <Landing> </Landing>
