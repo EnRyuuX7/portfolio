@@ -15,7 +15,7 @@ const Portfolio = () => {
                         setToggle(prev => !prev)
                     }}></label>
 
-                    <p className="lead">These are some of the works i have been involved in.</p>
+                    {/* <p className="lead">These are some of the works i have been involved in.</p> */}
 
                 </div>
             </div>

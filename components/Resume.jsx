@@ -33,9 +33,14 @@ const Resume = () => (
                         <div className="col-block experience">
                             <h3 className="col-title">Experience</h3>
                             <div className="resume-item"><span className="item-arrow"></span>
-                                <h5 className="item-title">UI/UX Designer</h5><span className="item-details">Deerhold .Ltd / 2021 Mar -
+                                <h5 className="item-title">UI/UX Designer</h5><span className="item-details">Deerhold .Ltd || 2021 Mar -
                                     2022 Jan</span>
                                 <p className="item-description">Fellowship Program</p>
+                            </div>
+                            <div className="resume-item"><span className="item-arrow"></span>
+                                <h5 className="item-title">React/Frontend Trainee</h5><span className="item-details">Code Himalaya || 2022 Apr -
+                                    Current</span>
+                                <p className="item-description">Trainee</p>
                             </div>
                         </div>
                     </div>
