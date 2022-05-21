@@ -58,10 +58,10 @@ const Skills = () => {
                                 <div className={styles.description}>Figma</div>
                             </div>
                         </div>
-                        <div className={`${styles.skillElement}  ${styles.gra9}`} data-description="Next.js">
+                        <div className={`${styles.skillElement}  ${styles.gra9}`} data-description="React">
                             <div className={styles.skillElementInner}>
-                                <div className={styles.title}>Nxt</div>
-                                <div className={styles.description}>Next.js</div>
+                                <div className={styles.title}>React</div>
+                                <div className={styles.description}>(Traininee)</div>
                             </div>
                         </div>
                         <div className={`${styles.skillElement}  ${styles.gra10}`} data-description="RealWorldCursor">
