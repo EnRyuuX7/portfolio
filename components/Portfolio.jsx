@@ -46,7 +46,7 @@ const Portfolio = () => {
 
                         <div className="one-half column folio-item ">
                             <div className="item-wrap">
-                                <img src="/lost-ravens.png" alt="lostravens" className="centered" />
+                                <img src="/lost-ravens.png" target="_blank" alt="lostravens" className="centered" />
                                 <a href="#modal-04" className={`overlay ${toggle && 'toggle-overlay'}`}>
                                     <div className="folio-item-table">
                                         <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
@@ -60,9 +60,25 @@ const Portfolio = () => {
                             </div>
                         </div>
 
-                        <div className="one-half column folio-item nomargin">
+                        <div className="one-half column folio-item">
                             <div className="item-wrap">
-                                <img src="/cursor.png" alt="Cursor Port" className="centered" />
+                                <img src="/discord-c.jpg" target="_blank" alt="Cursor Port" className="centered" />
+                                <a href="https://github.com/EnRyuuX7/discord-clone" className={`overlay ${toggle && 'toggle-overlay'}`}>
+                                    <div className="folio-item-table">
+                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
+                                            <h3 className="folio-title">Discord-Clone</h3>
+                                            <span className="folio-types">
+                                                React and Socket Implementation
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="one-half column folio-item">
+                            <div className="item-wrap">
+                                <img src="/cursor.png" target="_blank" alt="Cursor Port" className="centered" />
                                 <a href="https://www.deviantart.com/en-ryuu/art/Breeze-Hacked-Cursor-For-Windows-752551821" className={`overlay ${toggle && 'toggle-overlay'}`}>
                                     <div className="folio-item-table">
                                         <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
@@ -79,7 +95,7 @@ const Portfolio = () => {
 
                         <div className="one-half column folio-item">
                             <div className="item-wrap">
-                                <img src="/covidx.png" alt="CovidX" className="centered" />
+                                <img src="/covidx.png" target="_blank" alt="CovidX" className="centered" />
                                 <a href="https://github.com/Thunderk3g/COVID-X-v2.0" className={`overlay ${toggle && 'toggle-overlay'}`}>
                                     <div className="folio-item-table">
                                         <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
@@ -92,9 +108,9 @@ const Portfolio = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="one-half column folio-item nomargin">
+                        <div className="one-half column folio-item">
                             <div className="item-wrap">
-                                <img src="/shapeup.png" alt="Shape-Up" className="centered" />
+                                <img src="/shapeup.png" target="_blank" alt="Shape-Up" className="centered" />
                                 <a href="https://github.com/EnRyuuX7/shape-up" className={`overlay ${toggle && 'toggle-overlay'}`}>
                                     <div className="folio-item-table">
                                         <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
@@ -110,7 +126,7 @@ const Portfolio = () => {
 
                         <div className="one-half column folio-item">
                             <div className="item-wrap">
-                                <img src="/notes.png" alt="Transparent notes" />
+                                <img src="/notes.png" target="_blank" alt="Transparent notes" />
                                 <a href="https://www.deviantart.com/en-ryuu/art/Transparent-Notes-2-0-764915350" className={`overlay ${toggle && 'toggle-overlay'}`}>
                                     <div className="folio-item-table">
                                         <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>

@@ -3,6 +3,7 @@ html {
     margin: 0;
     font: bold 14px/1.4 "Open Sans", arial, sans-serif;
     background: #000;
+    /* background: radial-gradient(ellipse at top, #070f18 0%, #090a0f 100%); */
     overflow-x: hidden;
     scroll-behavior: smooth;
 }

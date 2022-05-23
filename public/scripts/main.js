@@ -1,8 +1,8 @@
 var ballCanvas;
 
 window.onload = function () {
-    ballCanvas = new ballCanvas();
-    ballCanvas.redraw(window.innerWidth, window.innerHeight);
+    // ballCanvas = new ballCanvas();
+    // ballCanvas.redraw(window.innerWidth, window.innerHeight);
 };
 
 function ballCanvas() {
