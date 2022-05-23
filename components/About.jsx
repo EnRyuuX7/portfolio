@@ -13,7 +13,7 @@ const Main = () => (
                 <div className="intro-info">
                     <div className='row aligned'>
                         <div className='one-third profile-image-container'>
-                            <Image className='profile-image' src="/x.jpg" alt="Profile Picture" height={720} width={720} objectFit='cover' />
+                            <Image className='profile-image' src="/profile.jpg" alt="Profile Picture" height={720} width={720} objectFit='cover' />
                         </div>
 
                         <div className='two-thirds column'>
