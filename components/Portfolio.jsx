@@ -43,7 +43,24 @@ const Portfolio = () => {
                             </div>
                         </div>
 
-                        <div className="one-half column folio-item">
+
+                        <div className="one-half column folio-item ">
+                            <div className="item-wrap">
+                                <img src="/lost-ravens.png" alt="lostravens" className="centered" />
+                                <a href="#modal-04" className={`overlay ${toggle && 'toggle-overlay'}`}>
+                                    <div className="folio-item-table">
+                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
+                                            <h3 className="folio-title">Lost Ravens EPK</h3>
+                                            <span className="folio-types">
+                                                Web-Design Music portfolio
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="one-half column folio-item nomargin">
                             <div className="item-wrap">
                                 <img src="/cursor.png" alt="Cursor Port" className="centered" />
                                 <a href="https://www.deviantart.com/en-ryuu/art/Breeze-Hacked-Cursor-For-Windows-752551821" className={`overlay ${toggle && 'toggle-overlay'}`}>
@@ -59,21 +76,6 @@ const Portfolio = () => {
                             </div>
                         </div>
 
-                        <div className="one-half column folio-item nomargin">
-                            <div className="item-wrap">
-                                <img src="/lost-ravens.png" alt="lostravens" className="centered" />
-                                <a href="#modal-04" className={`overlay ${toggle && 'toggle-overlay'}`}>
-                                    <div className="folio-item-table">
-                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
-                                            <h3 className="folio-title">Lost Ravens EPK</h3>
-                                            <span className="folio-types">
-                                                Web-Design Music portfolio
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
 
                         <div className="one-half column folio-item">
                             <div className="item-wrap">

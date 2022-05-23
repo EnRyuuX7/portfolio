@@ -777,6 +777,10 @@
     max-height: 80vw;
 }
 
+#portfolio .folio-item:nth-child(2n + 1) {
+    margin-left: 0;
+}
+
 #portfolio a:after {
     display: none;
 }
