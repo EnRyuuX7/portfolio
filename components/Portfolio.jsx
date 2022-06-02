@@ -1,17 +1,87 @@
+import styles from "./Portfolio.module.scss";
 import { useState } from "react";
+
+const items = [
+    {
+        link: "https://en-ryuu.github.io/",
+        title: "Generative Art USing p5.js",
+        type: "Graphic Design",
+        image: "/design.jpg"
+    },
+    {
+        link: "https://lostravens.com",
+        title: "Lost Ravens",
+        type: "Web Design",
+        image: "/lost-ravens.png"
+    },
+    {
+        link: "https://github.com/EnRyuuX7/discord-clone",
+        title: "Discord Clone",
+        type: "Web Development",
+        image: "/discord-c.jpg"
+    },
+    {
+        link: "https://www.deviantart.com/en-ryuu/art/Breeze-Hacked-Cursor-For-Windows-752551821",
+        title: "Breeze Hacked Cursor",
+        type: "Graphic Design",
+        image: "/cursor.png"
+    },
+    {
+        link: "https://github.com/Thunderk3g/COVID-X-v2.0",
+        title: "COVID-19 Tracker",
+        type: "Web Development",
+        image: "/covidx.png"
+    },
+    {
+        link: "https://github.com/EnRyuuX7/shape-up",
+        title: "Shape Up",
+        type: "Web Development",
+        image: "/shapeup.png"
+    },
+    {
+        link: "https://www.deviantart.com/en-ryuu/art/Transparent-Notes-2-0-764915350",
+        title: "Transparent Notes",
+        type: "Graphic Design",
+        image: "/notes.png"
+    },
+];
+const FolioCard = ({ link, title, type, image, toggle }) => {
+
+    return (
+        <div className={`one-half column ${styles.folio__item}`}>
+            <div className={styles.item__wrap}>
+                <img src={image} alt={title} className="centered" />
+                <a href={link} className={`${styles.overlay} ${toggle && styles.toggle__overlay}`}>
+                    <div className={styles.folio__itemTable}>
+                        <div id={styles.itemCell} className={`${styles.folio__itemCell} ${toggle && styles.toggleCell}`}>
+                            <h3 className={styles.folio__title}>{title}</h3>
+                            <span className={styles.folio__types}>
+                                {type}
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    );
+};
+
+
+
+
 
 const Portfolio = () => {
     const [toggle, setToggle] = useState(true)
     return (
-        <section id="portfolio">
+        <section id={styles.portfolio}>
 
-            <div className="row section-intro">
+            <div className="row section__intro">
                 <div className="column">
 
                     <h5>Portfolio</h5>
                     <h1>Check Out Some of My Works.</h1>
-                    <input type="checkbox" id="toggle_checkbox" />
-                    <label htmlFor="toggle_checkbox" onClick={() => {
+                    <input type="checkbox" id={styles.toggle__checkbox} />
+                    <label htmlFor={styles.toggle__checkbox} onClick={() => {
                         setToggle(prev => !prev)
                     }}></label>
 
@@ -19,128 +89,16 @@ const Portfolio = () => {
 
                 </div>
             </div>
-
-            <div className="portfolio-content">
-
+            <div className={styles.portfolio__content}>
                 <div className="container">
+                    <div id={styles.folio__wrapper}>
+                        {items.map((item, index) => (
+                            <FolioCard key={index} {...item} toggle={toggle} />
+                        ))}
 
 
-                    <div id="folio-wrapper">
 
-                        <div className="one-half column folio-item">
-                            <div className="item-wrap">
-                                <img src="/design.jpg" alt="Generative Art USing p5.js" className="centered" />
-                                <a href="https://enryuux7.github.io" className={`overlay ${toggle && 'toggle-overlay'}`}>
-                                    <div className="folio-item-table">
-                                        <div id="item-cell" className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
-                                            <h3 className="folio-title">Generative Art USing p5.js</h3>
-                                            <span className="folio-types">
-                                                Graphic Design
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-
-                        <div className="one-half column folio-item ">
-                            <div className="item-wrap">
-                                <img src="/lost-ravens.png" target="_blank" alt="lostravens" className="centered" />
-                                <a href="#modal-04" className={`overlay ${toggle && 'toggle-overlay'}`}>
-                                    <div className="folio-item-table">
-                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
-                                            <h3 className="folio-title">Lost Ravens EPK</h3>
-                                            <span className="folio-types">
-                                                Web-Design Music portfolio
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="one-half column folio-item">
-                            <div className="item-wrap">
-                                <img src="/discord-c.jpg" target="_blank" alt="Cursor Port" className="centered" />
-                                <a href="https://github.com/EnRyuuX7/discord-clone" className={`overlay ${toggle && 'toggle-overlay'}`}>
-                                    <div className="folio-item-table">
-                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
-                                            <h3 className="folio-title">Discord-Clone</h3>
-                                            <span className="folio-types">
-                                                React and Socket Implementation
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="one-half column folio-item">
-                            <div className="item-wrap">
-                                <img src="/cursor.png" target="_blank" alt="Cursor Port" className="centered" />
-                                <a href="https://www.deviantart.com/en-ryuu/art/Breeze-Hacked-Cursor-For-Windows-752551821" className={`overlay ${toggle && 'toggle-overlay'}`}>
-                                    <div className="folio-item-table">
-                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
-                                            <h3 className="folio-title">Breeze Hacked Cursor imported from Linux</h3>
-                                            <span className="folio-types">
-                                                Cursor porting
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-
-                        <div className="one-half column folio-item">
-                            <div className="item-wrap">
-                                <img src="/covidx.png" target="_blank" alt="CovidX" className="centered" />
-                                <a href="https://github.com/Thunderk3g/COVID-X-v2.0" className={`overlay ${toggle && 'toggle-overlay'}`}>
-                                    <div className="folio-item-table">
-                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
-                                            <h3 className="folio-title">CovidX v2.0</h3>
-                                            <span className="folio-types">
-                                                Web Development
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="one-half column folio-item">
-                            <div className="item-wrap">
-                                <img src="/shapeup.png" target="_blank" alt="Shape-Up" className="centered" />
-                                <a href="https://github.com/EnRyuuX7/shape-up" className={`overlay ${toggle && 'toggle-overlay'}`}>
-                                    <div className="folio-item-table">
-                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
-                                            <h3 className="folio-title">Shape-Up - 2D platformer</h3>
-                                            <span className="folio-types">
-                                                Unity Game Development
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="one-half column folio-item">
-                            <div className="item-wrap">
-                                <img src="/notes.png" target="_blank" alt="Transparent notes" />
-                                <a href="https://www.deviantart.com/en-ryuu/art/Transparent-Notes-2-0-764915350" className={`overlay ${toggle && 'toggle-overlay'}`}>
-                                    <div className="folio-item-table">
-                                        <div className={`folio-item-cell ${toggle && 'toggle-cell'}`}>
-                                            <h3 className="folio-title">Transparent notes 2.0</h3>
-                                            <span className="folio-types">
-                                                Rainmeter Skin - Customization
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div id="modal-01" className="popup-modal slider mfp-hide">
+                        {/* <div id="modal-01" className="popup-modal slider mfp-hide">
 
                             <div className="media">
                                 <img src="images/portfolio/modals/m-liberty.jpg" alt="" />
@@ -264,7 +222,7 @@ const Portfolio = () => {
                                 <a href="#" className="popup-modal-dismiss">Close</a>
                             </div>
 
-                        </div>
+                        </div> */}
 
 
                     </div>

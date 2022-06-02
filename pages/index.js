@@ -1,7 +1,7 @@
 // /pages/index.js
 
+import Header from "../components/Header/index";
 import Layout from "../components/Layout";
-import Landing from "../components/Landing";
 import About from "../components/About";
 import Resume from "../components/Resume";
 import Skills from "../components/Skills";
@@ -17,7 +17,7 @@ export default function Home() {
                 <title>Abhishek&apos;s Portfolio</title>
             </Head>
             <Layout>
-                <Landing> </Landing>
+                <Header />
                 <About> </About>
                 <Resume> </Resume>
                 <Skills> </Skills>

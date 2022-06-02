@@ -1,12 +1,12 @@
-import styles from "../styles/Skills.module.scss";
+import styles from "./Skills.module.scss";
 
 const Skills = () => {
     return (
-        <section id="skills">
-            <div className="skills-section single-section">
-                <div className="section-heading">
-                    <p className="section-description">I have done projects using the following.</p>
-                    <h2 className="section-title">My Skills</h2>
+        <section id={styles.skills}>
+            <div className="skills__wrapper ">
+                <div className="section__heading">
+                    {/* <p className="section__description">I have done projects using the following.</p> */}
+                    <h2 className="section__title">My Skills</h2>
                 </div>
                 <div className="container">
                     <div className={styles.skillTable}>
@@ -73,9 +73,9 @@ const Skills = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="row button-section">
+            {/* <div className="row button__section">
                 <div className="container">
-                    <a href="#" title="Download CV" className="button button-primary">Download CV</a>
+                    <a href="#" title="Download CV" className="button button__primary">Download CV</a>
                 </div>
             </div> */}
         </section >

@@ -1,0 +1,106 @@
+$background-color_1: #fcfcfc;
+$background-color_2: rgba(0, 0, 0, 0.95);
+$background-color_3: rgb(0, 0, 0);
+
+.navbar__button {
+    display: none;
+    z-index: 6;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    top: 3.5%;
+    right: 15%;
+    transition-duration: 0.5s;
+    .navbar__buttonIcon {
+        transition-duration: 0.5s;
+        position: absolute;
+        height: 5px;
+        width: 25px;
+        top: 15px;
+        background-color: $background-color_1;
+        &:before {
+            transition-duration: 0.5s;
+            position: absolute;
+            width: 35px;
+            height: 5px;
+            background-color: $background-color_1;
+            content: "";
+            top: -11px;
+        }
+        &:after {
+            transition-duration: 0.5s;
+            position: absolute;
+            width: 35px;
+            height: 5px;
+            background-color: $background-color_1;
+            content: "";
+            top: 11px;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+.navbar__button.navbar__open {
+    .navbar__buttonIcon {
+        transition-duration: 0.5s;
+        background: transparent;
+        &:before {
+            width: 30px;
+            margin-left: 0;
+            transform: rotateZ(45deg) scaleX(1) translate(7px, 8px);
+        }
+        &:after {
+            width: 30px;
+            margin-left: 0;
+            transform: rotateZ(-45deg) scaleX(1) translate(8px, -8px);
+        }
+    }
+}
+.navbar__items {
+    max-width: 80vw;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    a {
+        padding: 15px 20px;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .navbar__button {
+        display: block;
+    }
+    .navbar__wrapper {
+        height: 11vh;
+        width: 100vw;
+        z-index: 5;
+        position: fixed;
+        top: 0%;
+        background-color: $background-color_2;
+        transition-duration: 0.5s;
+    }
+    .navbar__wrapper.show {
+        background-color: $background-color_3;
+    }
+    .navbar__items {
+        min-width: 100vw;
+        flex-direction: column;
+        position: fixed;
+        background: #000000;
+        top: -80%;
+        transition-duration: 0.5s;
+        ul {
+            margin: 0%;
+            padding-top: 20%;
+            li {
+                &:last-child {
+                    border-bottom: #1ce2c8;
+                }
+            }
+        }
+    }
+    .navbar__show {
+        top: 0;
+    }
+}

@@ -1,47 +1,82 @@
+import styles from "./Resume.module.scss";
+
+const Experience = [
+    {
+        title: "UI/UX Designer",
+        company: "Deerhold .Ltd",
+        duration: "2021 Mar - 2022 Jan",
+        description: "Fellowship Program"
+    },
+    {
+        title: "React/Frontend Trainee",
+        company: "Code Himalaya",
+        duration: "2022 Mar - May",
+        description: "Trainee"
+    },
+    {
+        title: "Junior React Developer",
+        company: "Code Himalaya",
+        duration: "2020 May - Current",
+        description: "Full Time"
+    }
+]
+
+const Education = [
+    {
+        achievement: "B.Sc CSIT",
+        institute: "Deerwalk Institute of Technology",
+        duration: "2017 - Current",
+        description: "Final year 8th semester"
+    },
+    {
+        achievement: "+2",
+        institute: "Trinity International College",
+        duration: "2015 - 2017",
+        description: ""
+    },
+    {
+        achievement: "School Leaving Certificate",
+        institute: "Brihaspati Vidyasadan",
+        duration: "2015",
+        description: ""
+    }
+]
+
 const Resume = () => (
-    <section id="resume">
-        <div className="container-wrapper" id="resume" data-simplebar>
+    <section >
+        <div className="container__wrapper" id={styles.resume} data-simplebar>
             <div className="container">
-                <div className="section-heading page-heading">
-                    {/* <p className="section-description">Check out my Resume</p> */}
-                    <h2 className="section-title">Resume</h2>
-                    <div className="animated-bar"></div>
+                <div className="section__heading page__heading">
+                    {/* <p className="section__description">Check out my Resume</p> */}
+                    <h2 className="section__title">Resume</h2>
+                    <div className="animated__bar"></div>
                 </div>
             </div>
-            <div className="resume-section single-section">
+            <div className={styles.resume__section}>
                 <div className="row">
                     {/* <!-- Education part--> */}
                     <div className="one-half column">
-                        <div className="col-block education">
-                            <h3 className="col-title">Education</h3>
-                            <div className="resume-item"><span className="item-arrow"></span>
-                                <h5 className="item-title">B.Sc CSIT</h5><span className="item-details">Deerwalk Institute of Technology / 2017 - Current</span>
-                                <p className="item-description">Final year 8th semester</p>
-                            </div>
-                            <div className="resume-item"><span className="item-arrow"></span>
-                                <h5 className="item-title">+2</h5><span className="item-details">Trinity International College / 2015 -
-                                    2017</span>
-                                <p className="item-description"></p>
-                            </div>
-                            <div className="resume-item"><span className="item-arrow"></span>
-                                <h5 className="item-title">School Leaving Certificate</h5><span className="item-details">Brihaspati Vidyasadan / 2015</span>
-                                <p className="item-description"></p>
-                            </div>
+                        <div className={styles.resume__education}>
+                            <h3 className={styles.resume__title}>Education</h3>
+                            {Education.map((edu, index) => (
+                                <div className={styles.resume__item} key={index}>
+
+                                    <h5 className={styles.item__title}>{edu.achievement}</h5><span className={styles.item__details}>{edu.institute} / {edu.duration}</span>
+                                    <p className={styles.item__description}>{edu.description}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                     <div className="one-half column">
-                        <div className="col-block experience">
-                            <h3 className="col-title">Experience</h3>
-                            <div className="resume-item"><span className="item-arrow"></span>
-                                <h5 className="item-title">UI/UX Designer</h5><span className="item-details">Deerhold .Ltd || 2021 Mar -
-                                    2022 Jan</span>
-                                <p className="item-description">Fellowship Program</p>
-                            </div>
-                            <div className="resume-item"><span className="item-arrow"></span>
-                                <h5 className="item-title">React/Frontend Trainee</h5><span className="item-details">Code Himalaya || 2022 Apr -
-                                    Current</span>
-                                <p className="item-description">Trainee</p>
-                            </div>
+                        <div className={styles.resume__experience}>
+                            <h3 className={styles.resume__title}>Experience</h3>
+                            {Experience.map((exp, index) => (
+                                <div className={styles.resume__item} key={index}>
+                                    <h5 className={styles.item__title}>{exp.title}</h5><span className={styles.item__details}>{exp.company} / {exp.duration}</span>
+                                    <p className={styles.item__description}>{exp.description}</p>
+                                </div>
+                            ))}
+
                         </div>
                     </div>
                 </div>

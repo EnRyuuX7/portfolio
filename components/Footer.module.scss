@@ -1,0 +1,126 @@
+$color_1: #cecece;
+$color_2: #ffffff;
+$color_3: #ff0077;
+$color_4: rgba(255, 255, 255, 0.1);
+$font-family_1: "poppins-regular", sans-serif;
+
+#footer {
+    bottom: 0%;
+    padding: 5rem 0 3rem 0;
+    font-size: 1.4rem;
+    font-family: $font-family_1;
+    color: $color_1;
+    .container {
+        margin-left: 0;
+    }
+    a {
+        color: $color_2;
+        &:visited {
+            color: $color_2;
+        }
+        &:hover {
+            color: $color_3;
+        }
+        &:focus {
+            color: $color_3;
+        }
+    }
+    .row {
+        max-width: 900px;
+    }
+    .social {
+        text-align: right;
+    }
+    .footer__social {
+        width: auto;
+        display: inline-block;
+        font-size: 2.1rem;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: -0.3rem;
+        li {
+            display: inline-block;
+            margin: 0 12px;
+            padding: 0;
+            a {
+                color: $color_1;
+            }
+        }
+    }
+    .copyright {
+        span {
+            display: inline-block;
+            &::after {
+                content: "|";
+                display: inline-block;
+                padding: 0 1rem 0 1.2rem;
+                color: $color_4;
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 450px) {
+    #footer {
+        .copyright {
+            span {
+                padding-top: 20%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    #footer {
+        text-align: center;
+        .social {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .copyright {
+            span {
+                display: block;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+#go__top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    a {
+        $size: 2em;
+        text-decoration: none;
+        border: 0 none;
+        display: block;
+        height: $size;
+        width: $size;
+        line-height: $size;
+        text-align: center;
+        background: #000000;
+        border: 1px solid rgba(206, 206, 206, 0.2);
+        border-radius: $size/4;
+        color: #ffffff;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        i {
+            font-size: 1.6rem;
+            line-height: inherit;
+        }
+        &:hover {
+            background: #000000;
+        }
+    }
+}

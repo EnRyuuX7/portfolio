@@ -1,82 +1,82 @@
+import styles from "./Contact.module.scss";
+
 import { FaLocationArrow } from "react-icons/fa";
 import { FaUser } from "react-icons/fa"
 import { FaPhone } from "react-icons/fa"
 import { FaEnvelope } from "react-icons/fa";
 
-const Contact = () => (
-    <section id="contact">
-        <div className="section-heading page-heading column">
-            <h2 className="section-title">Get in Touch</h2>
-            <div className="animated-bar"></div>
+
+const ELink = ({ type, link }) => {
+    return (
+        <a href={`${type}:${link}`}>{link}</a>
+    )
+}
+
+const ContactInfo = [
+    { icon: <FaUser />, type: "Name", value: "Abhishek Pandey" },
+    { icon: <FaLocationArrow />, type: "Location", value: "Banasthali, Kathmandu, Nepal" },
+    { icon: <FaPhone />, type: "Call Me", value: <ELink type="tel" link="+9779861215345" /> },
+    { icon: <FaEnvelope />, type: "Email Me", value: <ELink type="mailto" link="emailabhishekp@gmail.com" /> }
+]
+
+const ContactCards = ({ icon, type, value }) => (
+    <li>
+        <div className={` ${styles.media} align-items-center`}><span className={styles.info__icon}>{icon}</span>
+            <div className={` ${styles.media__body} ${styles.info__details}`}>
+                <h6 className={styles.info__type}>{type}</h6><span className="info__value">{value}</span>
+            </div>
         </div>
-        <div className="contact-section single-section">
+    </li>
+);
+
+
+const Contact = () => (
+    <section id={styles.contact}>
+        <div className="section__heading page__heading column" >
+            <h2 className="section__title">Get in Touch</h2>
+            <div className="animated__bar"></div>
+        </div>
+        <div className={styles.contact__section}>
             <div className="row">
                 <div className="two-thirds column">
-                    <form className="contact-form" id="contact-form"
+                    <form className={styles.contact__form} id={styles.contact__form}
                         action="#">
-                        <h4 className="content-title">Message Me</h4>
+                        <h4 className={styles.content__title}>Message Me</h4>
                         <div className="row">
-                            <div className="group">
+                            <div className={styles.group}>
                                 <div className="one-half column">
-                                    <div className="form-group gap"><input className="form-control" id="contact-name" type="text"
+                                    <div className={`${styles.form__group} ${styles.gap}`}><input className={styles.form__control} id={styles.contact__name} type="text"
                                         name="name" placeholder="Name" required="" /></div>
                                 </div>
                                 <div className="one-half column">
-                                    <div className="form-group gap c-email"><input className="form-control" id="contact-email"
+                                    <div className={`${styles.form__group} ${styles.gap} ${styles.c__email}`}><input className={styles.form__control} id={styles.contact__email}
                                         type="email" name="email" placeholder="Email" required="" /></div>
                                 </div>
                             </div>
-                            <div className="column form-group nomargin"><input className="form-control" id="contact-subject" type="text"
+                            <div className={`column ${styles.form__group} nomargin`}><input className={styles.form__control} id={styles.contact__subject} type="text"
                                 name="subject" placeholder="Subject" autoComplete="off" required="" /></div>
-                            <div className="column form-group form-message nomargin"><textarea className="form-control" id="contact-message"
+                            <div className={`column ${styles.form__group} nomargin`}><textarea className={styles.form__control} id={styles.contact__message}
                                 name="message" placeholder="Message" rows="5" required=""></textarea></div>
-                            <div className="column form-submit nomargin"><button className="btn button-main button-scheme" id="contact-submit"
+                            <div className={`column ${styles.form__submit} nomargin`}><button className={`${styles.btn}`} id={styles.contact__submit}
                                 type="submit">Send Message</button>
-                                <p className="contact-feedback"></p>
+                                <p className={styles.contact__feedback}></p>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div className="one-third column">
-                    <div className="contact-info">
-                        <h4 className="content-title">Contact Info</h4>
-                        <ul className="list-unstyled list-info">
-                            <li className="nomargin">
-                                <div className="media align-items-center"><span className="info-icon"><FaUser></FaUser></span>
-                                    <div className="media-body info-details">
-                                        <h6 className="info-type">Name</h6><span className="info-value">Abhishek Pandey</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="media align-items-center"><span className="info-icon"><FaLocationArrow></FaLocationArrow></span>
-                                    <div className="media-body info-details">
-                                        <h6 className="info-type">Location</h6><span className="info-value">Banasthali, Kathmandu, Nepal</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="media align-items-center"><span className="info-icon"><FaPhone></FaPhone></span>
-                                    <div className="media-body info-details">
-                                        <h6 className="info-type">Call Me</h6><span className="info-value"><a href="tel:+9779861215345">+977
-                                            9861215345</a></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="media align-items-center"><span className="info-icon"><FaEnvelope></FaEnvelope></span>
-                                    <div className="media-body info-details">
-                                        <h6 className="info-type">Email Me</h6><span className="info-value"><a
-                                            href="mailto:emailabhishekp@gmail.com">emailabhishekp@gmail.com</a></span>
-                                    </div>
-                                </div>
-                            </li>
+                    <div className={styles.contact__info}>
+                        <h4 className={styles.content__title}>Contact Info</h4>
+                        <ul className={`${styles.list__unstyled} ${styles.list__info}`}>
+                            {ContactInfo.map((info, index) => (
+                                <ContactCards key={index} icon={info.icon} type={info.type} value={info.value} />
+                            ))}
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section >
 
 
 

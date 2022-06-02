@@ -3,7 +3,7 @@ html {
     margin: 0;
     font: bold 14px/1.4 "Open Sans", arial, sans-serif;
     background: #000;
-    /* background: radial-gradient(ellipse at top, #070f18 0%, #090a0f 100%); */
+    background: radial-gradient(ellipse at top, #070f18 0%, #090a0f 100%);
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -236,12 +236,12 @@ body::-webkit-scrollbar-thumb {
     align-items: center !important;
 }
 
-.list-unstyled {
+.list__unstyled {
     list-style: none;
     padding-left: 0;
 }
 
-.content-title {
+.content__title {
     line-height: 1.5;
     margin-bottom: 12px;
 }
@@ -346,7 +346,7 @@ span {
 
 @media screen and (max-width: 500px) {
     section {
-        padding-top: 50px;
+        margin: 50px 0 !important;
     }
 }
 
@@ -362,7 +362,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #f0f0f0;
+    color: #ffffff;
 }
 
 b {

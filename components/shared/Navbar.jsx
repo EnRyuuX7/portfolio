@@ -1,17 +1,18 @@
 import { useState } from "react";
+import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
   const [toggleMenu, setMenu] = useState(false);
 
   return (
-    <nav className="navigation">
-      <div className={`menu btn2 ${toggleMenu && 'open'}`} onClick={() => {
+    <nav className={styles.navbar}>
+      <div className={`${styles.navbar__button} ${toggleMenu && styles.navbar__open}`} onClick={() => {
         setMenu(prev => !prev)
       }}>
-        <div className="icon"></div>
+        <div className={styles.navbar__buttonIcon}></div>
       </div>
-      <div className={`wrapper ${toggleMenu && 'show'}`}>
-        <ul className={`nav-items ${toggleMenu && 'show'}`}>
+      <div className={`${styles.navbar__wrapper} ${toggleMenu && styles.navbar__show}`}>
+        <ul className={`${styles.navbar__items} ${toggleMenu && styles.navbar__show}`}>
           <li>
             <a href="#about">About</a>
           </li>

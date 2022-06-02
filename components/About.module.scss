@@ -1,0 +1,88 @@
+@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
+    &:before {
+        position: absolute;
+        content: "";
+        top: $y;
+        left: $x;
+        right: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        transform: scale($size);
+        -webkit-filter: blur($spread);
+        -moz-filter: blur($spread);
+        -ms-filter: blur($spread);
+        filter: blur($spread);
+        background: linear-gradient(270deg, $colorA, $colorB);
+        background-size: 200% 200%;
+        animation: animateGlow $duration ease infinite;
+
+        @keyframes animateGlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    }
+}
+
+$color_1: #efefef;
+$background-color_1: #000000;
+#about {
+    color: $color_1;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    .section__intro {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    .about__info {
+        margin-top: 4.2rem;
+        margin-right: -30px;
+        margin-left: -30px;
+        p {
+            text-align: center;
+            font-weight: 10;
+            line-height: normal;
+        }
+        .lead {
+            position: relative;
+            color: $color_1;
+            background-color: $background-color_1;
+            padding: 5%;
+            border-radius: 10px;
+            line-height: 2em;
+            z-index: 1;
+            &:after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                opacity: 0.9;
+                filter: blur(100px);
+                border-radius: 10px;
+                background: $background-color_1;
+            }
+            @include backlight(0, 0, 10vh, 0.75, #0fffc1, #7e0fff, 10s);
+        }
+    }
+    .profile__imageContainer {
+        height: 12rem;
+        width: 12rem;
+    }
+    .profile__image {
+        border-radius: 50%;
+        margin: 0.9rem 0 0 0;
+        float: left;
+    }
+}

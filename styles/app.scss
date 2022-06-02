@@ -73,3 +73,158 @@ $shadows-big: multiple-box-shadow(100);
         transform: translateY(-2000px);
     }
 }
+
+/* Title and info css Section
+-------------------------------------------------------*/
+$color_1: #cfcfcf;
+$color_2: #ff0077;
+$color_3: #cecece;
+$font-family_1: "poppins-semibold", serif;
+$background-color_1: #161616;
+$background-color_2: #fff;
+$background-color_3: #101010;
+
+@-webkit-keyframes barAnimation {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    to {
+        -webkit-transform: translateX(75px);
+        transform: translateX(75px);
+    }
+}
+@keyframes barAnimation {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    to {
+        -webkit-transform: translateX(75px);
+        transform: translateX(75px);
+    }
+}
+.section__intro {
+    h1 {
+        text-align: center;
+        font-family: $font-family_1;
+        font-size: 3.6rem;
+        color: $color_1;
+        line-height: 1.25;
+        margin-bottom: 1.2rem;
+    }
+    h5 {
+        text-align: center;
+        color: $color_2;
+        font-size: 1.6rem;
+        line-height: 1.875;
+        margin-bottom: 0.3rem;
+        letter-spacing: 0.4rem;
+    }
+}
+
+.section__heading {
+    margin-bottom: 50px;
+    text-align: left;
+    > .section__title {
+        display: inline-block;
+        font-size: 38px;
+        font-weight: 700;
+        letter-spacing: -0.25px;
+        line-height: 100%;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 4;
+    }
+    > .section__description {
+        color: $color_3;
+        font-size: 15px;
+        margin-bottom: 17px;
+    }
+}
+.section__heading.page__heading {
+    text-align: center;
+    > .section__title {
+        font-size: 46px;
+        margin-bottom: 37px;
+    }
+    > .animated__bar {
+        background-color: $background-color_2;
+        content: "";
+        display: block;
+        height: 4px;
+        left: 0;
+        margin: 0 auto 0 auto;
+        position: relative;
+        right: 0;
+        width: 75px;
+        &:after {
+            -webkit-animation-duration: 3s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-name: barAnimation;
+            -webkit-animation-timing-function: linear;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-name: barAnimation;
+            animation-timing-function: linear;
+            background-color: $background-color_3;
+            content: "";
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 4px;
+            left: 0;
+        }
+        &:before {
+            -webkit-animation-duration: 3s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-name: barAnimation;
+            -webkit-animation-timing-function: linear;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-name: barAnimation;
+            animation-timing-function: linear;
+            background-color: $background-color_3;
+            content: "";
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 4px;
+            left: 8px;
+        }
+    }
+}
+@media (max-width: 991.98px) {
+    .section__heading {
+        > .section__title {
+            font-size: 36px;
+        }
+        > .section__description {
+            font-size: 14px;
+        }
+    }
+    .section__heading.page__heading {
+        > .section__title {
+            font-size: 42px;
+        }
+    }
+}
+@media (max-width: 767.98px) {
+    .section__heading {
+        > .section__description {
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width: 575.98px) {
+    .section__heading {
+        > .section__title {
+            font-size: 34px;
+        }
+    }
+    .section__heading.page__heading {
+        > .section__title {
+            font-size: 36px;
+        }
+    }
+}
