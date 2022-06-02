@@ -61,7 +61,7 @@ const Skills = () => {
                         <div className={`${styles.skillElement}  ${styles.gra9}`} data-description="React">
                             <div className={styles.skillElementInner}>
                                 <div className={styles.title}>React</div>
-                                <div className={styles.description}>(Trainee)</div>
+                                <div className={styles.description}>ReactJS</div>
                             </div>
                         </div>
                         <div className={`${styles.skillElement}  ${styles.gra10}`} data-description="RealWorldCursor">

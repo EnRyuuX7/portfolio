@@ -37,7 +37,7 @@ const Education = [
     {
         achievement: "School Leaving Certificate",
         institute: "Brihaspati Vidyasadan",
-        duration: "2015",
+        duration: "2007 - 2014",
         description: ""
     }
 ]
