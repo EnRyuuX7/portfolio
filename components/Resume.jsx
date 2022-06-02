@@ -16,7 +16,7 @@ const Experience = [
     {
         title: "Junior React Developer",
         company: "Code Himalaya",
-        duration: "2020 May - Current",
+        duration: "2022 May - Current",
         description: "Full Time"
     }
 ]
