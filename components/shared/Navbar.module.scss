@@ -1,6 +1,6 @@
 $background-color_1: #fcfcfc;
 $background-color_2: rgba(0, 0, 0, 0.95);
-$background-color_3: rgb(0, 0, 0);
+$background-color_3: rgba(0, 0, 0, 0);
 
 .navbar__button {
     display: none;
@@ -76,18 +76,19 @@ $background-color_3: rgb(0, 0, 0);
         width: 100vw;
         z-index: 5;
         position: fixed;
+        left: 0;
         top: 0%;
-        background-color: $background-color_2;
+        background-color: $background-color_3;
         transition-duration: 0.5s;
     }
     .navbar__wrapper.show {
-        background-color: $background-color_3;
+        background-color: $background-color_2;
     }
     .navbar__items {
         min-width: 100vw;
         flex-direction: column;
         position: fixed;
-        background: #000000;
+        background: $background-color_2;
         top: -80%;
         transition-duration: 0.5s;
         ul {
@@ -101,6 +102,7 @@ $background-color_3: rgb(0, 0, 0);
         }
     }
     .navbar__show {
+        background-color: $background-color_2;
         top: 0;
     }
 }

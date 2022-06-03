@@ -4,8 +4,6 @@ import Script from "next/script";
 const Layout = ({ children }) => (
   <div>
     <Script src="/scripts/main.js"></Script>
-
-    {/* <canvas id="bouncyBall"></canvas> */}
     <div id='stars'></div>
     <div id='stars2'></div>
     <div id='stars3'></div>
