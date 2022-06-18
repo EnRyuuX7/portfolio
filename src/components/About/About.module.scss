@@ -34,7 +34,7 @@
 
 $color_1: #efefef;
 $background-color_1: #000000;
-#about {
+.about {
     color: $color_1;
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -84,5 +84,24 @@ $background-color_1: #000000;
         border-radius: 50%;
         margin: 0.9rem 0 0 0;
         float: left;
+    }
+    .about__cvWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+        .about__cv {
+            background: none;
+            border: 2px solid;
+            line-height: 1;
+            padding: 1em 1em;
+            transition: 0.25s;
+
+            &:hover,
+            &:focus {
+                border-color: #1ce2c8;
+                color: #1ce2c8;
+            }
+        }
     }
 }

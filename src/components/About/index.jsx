@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link';
 import styles from './About.module.scss';
 
 const About = () => (
 
-    <section id={styles.about}>
+    <section id="about" className={styles.about}>
 
         <div className='container'>
             <div className="section__intro">
@@ -15,6 +16,7 @@ const About = () => (
                     <div className='row aligned'>
                         <div className={`one-third ${styles.profile__imageContainer}`}>
                             <Image className={styles.profile__image} src="/profile.jpg" alt="Profile Picture" height={720} width={720} objectFit='cover' />
+
                         </div>
 
                         <div className='two-thirds column'>
@@ -25,15 +27,15 @@ const About = () => (
                         </div>
                     </div>
                 </div>
+                <div className={styles.about__cvWrapper}>
+                    <a className={styles.about__cv} href="./abhishek-pandey-cv.pdf" target="_blank" title="Download CV" >Download CV</a>
+                </div>
             </div>
         </div>
 
 
-        <div className="row button__section">
-            <div className="tweleve column">
-                <a href="/src/assets/documents/abhishek-pandey-resume.pdf" target="_blank" title="Download CV" className="button stroke">Download CV</a>
-            </div>
-        </div>
+
+
 
     </section>
 

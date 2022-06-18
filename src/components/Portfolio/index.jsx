@@ -73,7 +73,7 @@ const FolioCard = ({ link, title, type, image, toggle }) => {
 const Portfolio = () => {
     const [toggle, setToggle] = useState(true)
     return (
-        <section id={styles.portfolio}>
+        <section id="portfolio" className={styles.portfolio}>
 
             <div className="row section__intro">
                 <div className="column">

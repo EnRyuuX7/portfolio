@@ -6,7 +6,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
 
 const Footer = () => (
-    <section id={styles.footer}>
+    <section id="footer" className={styles.footer}>
         <footer>
             <div className="container">
                 <div className="one-half column">
@@ -26,8 +26,15 @@ const Footer = () => (
                     </div>
                 </div>
 
-                <div id={styles.go__top}>
-                    <a className={styles.smoothscroll} title="Back to Top" href="#__next"><FaArrowUp></FaArrowUp></a>
+
+                <div id={styles.fixed__right}>
+                    {/* <div className="row button__section">
+                        <div className="tweleve column">
+                        </div>
+                    </div> */}
+
+
+                    <a className={`${styles.smoothscroll} ${styles.go__top}`} title="Back to Top" href="#__next"><FaArrowUp></FaArrowUp></a>
                 </div>
             </div>
         </footer>

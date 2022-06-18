@@ -44,7 +44,7 @@ const Education = [
 
 const Resume = () => (
     <section >
-        <div className="container__wrapper" id={styles.resume} data-simplebar>
+        <div className={styles.resume} id="resume" data-simplebar>
             <div className="container">
                 <div className="section__heading page__heading">
                     {/* <p className="section__description">Check out my Resume</p> */}

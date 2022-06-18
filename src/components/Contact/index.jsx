@@ -31,7 +31,8 @@ const ContactCards = ({ icon, type, value }) => (
 
 
 const Contact = () => (
-    <section id={styles.contact}>
+    <section id="contact" className={styles.contact}>
+
         <div className="section__heading page__heading column" >
             <h2 className="section__title">Get in Touch</h2>
             <div className="animated__bar"></div>

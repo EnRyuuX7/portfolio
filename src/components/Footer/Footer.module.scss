@@ -4,7 +4,7 @@ $color_3: #ff0077;
 $color_4: rgba(255, 255, 255, 0.1);
 $font-family_1: "poppins-regular", sans-serif;
 
-#footer {
+.footer {
     bottom: 0%;
     padding: 5rem 0 3rem 0;
     font-size: 1.4rem;
@@ -94,12 +94,14 @@ $font-family_1: "poppins-regular", sans-serif;
     }
 }
 
-#go__top {
+#fixed__right {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     bottom: 2%;
     right: 1%;
     z-index: 3;
-    a {
+    .go__top {
         $size: 2em;
         text-decoration: none;
         border: 0 none;
