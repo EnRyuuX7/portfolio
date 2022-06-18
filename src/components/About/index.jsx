@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './About.module.scss';
 
-const Main = () => (
+const About = () => (
 
     <section id={styles.about}>
 
@@ -28,19 +28,16 @@ const Main = () => (
             </div>
         </div>
 
-        {/*         
+
         <div className="row button__section">
-			<div className="col-twelve">
-				<a href="#contact" title="Hire Me" className="button stroke smoothscroll">Hire Me</a>
-				<a href="#" title="Download CV" className="button button__primary">Download CV</a>
-			</div>
-		</div> */}
-
-
+            <div className="tweleve column">
+                <a href="/src/assets/documents/abhishek-pandey-resume.pdf" target="_blank" title="Download CV" className="button stroke">Download CV</a>
+            </div>
+        </div>
 
     </section>
 
 
 );
 
-export default Main;
+export default About;

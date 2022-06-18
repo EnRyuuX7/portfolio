@@ -1,13 +1,13 @@
 // /pages/index.js
 
-import Header from "../components/Header/index";
-import Layout from "../components/Layout";
-import About from "../components/About";
-import Resume from "../components/Resume";
-import Skills from "../components/Skills";
-import Portfolio from "../components/Portfolio";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+import Header from "/src/components/Header";
+import Layout from "/src/components/Layout";
+import About from "/src/components/About";
+import Resume from "/src/components/Resume";
+import Skills from "/src/components/Skills";
+import Portfolio from "/src/components/Portfolio";
+import Contact from "/src/components/Contact";
+import Footer from "/src/components/Footer";
 import Head from "next/head";
 
 export default function Home() {
