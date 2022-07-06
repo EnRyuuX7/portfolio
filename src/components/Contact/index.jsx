@@ -4,6 +4,7 @@ import { FaLocationArrow } from "react-icons/fa";
 import { FaUser } from "react-icons/fa"
 import { FaPhone } from "react-icons/fa"
 import { FaEnvelope } from "react-icons/fa";
+import ReactTooltip from 'react-tooltip';
 
 
 const ELink = ({ type, link }) => {
@@ -40,8 +41,14 @@ const Contact = () => (
         <div className={styles.contact__section}>
             <div className="row">
                 <div className="two-thirds column">
+                    {/* <form className={styles.contact__form} id={styles.contact__form}
+                        action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="22b1ad2a-7d14-4c33-9ea0-9e5859f4309a" />
+                        <input type="hidden" name="subject" value="New Message from Portfolio" />
+                        <input type="checkbox" name="botcheck" id="" /> */}
                     <form className={styles.contact__form} id={styles.contact__form}
                         action="#">
+
                         <h4 className={styles.content__title}>Message Me</h4>
                         <div className="row">
                             <div className={styles.group}>
@@ -59,7 +66,7 @@ const Contact = () => (
                             <div className={`column ${styles.form__group} nomargin`}><textarea className={styles.form__control} id={styles.contact__message}
                                 name="message" placeholder="Message" rows="5" required=""></textarea></div>
                             <div className={`column ${styles.form__submit} nomargin`}><button className={`${styles.btn}`} id={styles.contact__submit}
-                                type="submit">Send Message</button>
+                                data-tip="Not Implemented yet Sorry!!" >Send Message</button>
                                 <p className={styles.contact__feedback}></p>
                             </div>
                         </div>
@@ -77,6 +84,7 @@ const Contact = () => (
                 </div>
             </div>
         </div>
+        <ReactTooltip place="right" type="light" effect="solid" />
     </section >
 
 

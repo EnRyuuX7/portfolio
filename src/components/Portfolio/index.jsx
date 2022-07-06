@@ -1,5 +1,7 @@
 import styles from "./Portfolio.module.scss";
 import { useState } from "react";
+import ReactTooltip from 'react-tooltip';
+
 
 const items = [
     {
@@ -48,10 +50,10 @@ const items = [
 const FolioCard = ({ link, title, type, image, toggle }) => {
 
     return (
-        <div className={`one-half column ${styles.folio__item}`}>
+        <div className={`one-half column ${styles.folio__item}`} >
             <div className={styles.item__wrap}>
                 <img src={image} alt={title} className="centered" />
-                <a href={link} className={`${styles.overlay} ${toggle && styles.toggle__overlay}`}>
+                <a href={link} target="blank" className={`${styles.overlay} ${toggle && styles.toggle__overlay}`}>
                     <div className={styles.folio__itemTable}>
                         <div id={styles.itemCell} className={`${styles.folio__itemCell} ${toggle && styles.toggleCell}`}>
                             <h3 className={styles.folio__title}>{title}</h3>
@@ -91,7 +93,7 @@ const Portfolio = () => {
             </div>
             <div className={styles.portfolio__content}>
                 <div className="container">
-                    <div id={styles.folio__wrapper}>
+                    <div id={styles.folio__wrapper} data-tip="Details Coming Soon!">
                         {items.map((item, index) => (
                             <FolioCard key={index} {...item} toggle={toggle} />
                         ))}
@@ -229,7 +231,7 @@ const Portfolio = () => {
 
                 </div>
             </div>
-
+            <ReactTooltip place="right" type="light" effect="float" />
         </section>
     )
 };
