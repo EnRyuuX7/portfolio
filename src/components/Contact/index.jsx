@@ -60,22 +60,14 @@ const Contact = () => {
     }
 
     const sendMessage = () => {
-        console.log(verified);
-        if (verified) {
-            setTextColor("#868686");
-            setShowText("Loading . . . ");
-            submit({
-                Name: register.name,
-                Email: register.email,
-                Subject: register.subject,
-                Message: register.message
-            })
-        }
-        else {
-            setTextColor("#ff0000")
-            setShowText("***Complete the captcha and try again.***")
-        }
+        submit({
+            Name: register.name,
+            Email: register.email,
+            Subject: register.subject,
+            Message: register.message
+        })
     }
+
     const { submit } = useWeb3forms({
         apikey: "6LdwrtUgAAAAAFO1Z21iOSBqjrAuGAMNOY4dyyVO",
         onSuccess: (successMessage, data) => {
