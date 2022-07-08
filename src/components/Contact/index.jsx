@@ -60,6 +60,7 @@ const Contact = () => {
     }
 
     const sendMessage = () => {
+        console.log(verified);
         if (verified) {
             setTextColor("#868686");
             setShowText("Loading . . . ");
