@@ -64,22 +64,17 @@ const Skills = () => {
                                 <div className={styles.description}>ReactJS</div>
                             </div>
                         </div>
-                        <div className={`${styles.skillElement}  ${styles.gra10}`} data-description="RealWorldCursor">
+                        <div className={`${styles.skillElement}  ${styles.gra10}`} data-description="Material UI">
                             <div className={styles.skillElementInner}>
-                                <div className={styles.title}>Rc</div>
-                                <div className={styles.description}>Real World Cursor</div>
+                                <div className={styles.title}>MUI</div>
+                                <div className={styles.description}>Material UI</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {/* <div className="row button__section">
-                <div className="container">
-                    <a href="#" title="Download CV" className="button button__primary">Download CV</a>
-                </div>
-            </div> */}
-        </section >
-    )
+        </section>
+    );
 };
 
 export default Skills;
