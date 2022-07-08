@@ -17,6 +17,7 @@
         "react-hook-form": "^7.33.1",
         "react-icons": "^4.3.1",
         "react-tooltip": "^4.2.21",
+        "reaptcha": "^1.12.1",
         "sass": "^1.49.9",
         "use-web3forms": "^1.2.1"
     },

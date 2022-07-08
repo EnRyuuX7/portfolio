@@ -8,6 +8,7 @@ import ReactTooltip from 'react-tooltip';
 import useWeb3forms from "use-web3forms";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
+import Reaptcha from "reaptcha";
 
 
 const ELink = ({ type, link }) => {
@@ -35,9 +36,15 @@ const ContactCards = ({ icon, type, value }) => (
 
 
 const Contact = () => {
+    const [verified, setVerified] = useState(false);
     const [showText, setShowText] = useState("");
     const [textColor, setTextColor] = useState("");
     const { register, handleSubmit, formState: { errors } } = useForm();
+
+    const onVerify = e => {
+        setVerified(true);
+    };
+
     const onSubmit = data => {
         if (data.name && data.email && data.message && data.subject) {
             setTextColor("#868686");
@@ -55,7 +62,7 @@ const Contact = () => {
         }
     }
     const { submit } = useWeb3forms({
-        apikey: "22b1ad2a-7d14-4c33-9ea0-9e5859f4309a",
+        apikey: "6LdwrtUgAAAAAFO1Z21iOSBqjrAuGAMNOY4dyyVO",
         onSuccess: (successMessage, data) => {
             setTextColor("#1ce2c8")
             setShowText(successMessage)
@@ -110,11 +117,15 @@ const Contact = () => {
                             </div>
                             <div className="row">
                                 <div className={`column ${styles.form__submit} `}><button className={`${styles.btn}`} id={styles.contact__submit}
-                                    type="submit"
+                                    type="submit" disabled={!verified}
                                 >Send Message</button>
                                     <p className={styles.contact__feedback} style={{ color: textColor }}>{showText}</p>
                                 </div>
                             </div>
+                            <Reaptcha
+                                sitekey="6LdeH9UgAAAAAMShDGITyg3u735hTdTnASe3LucD"
+                                onVerify={onVerify}
+                            />
                         </form>
                     </div>
                     <div className="one-third column">
