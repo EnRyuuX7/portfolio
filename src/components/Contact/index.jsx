@@ -69,7 +69,7 @@ const Contact = () => {
     }
 
     const { submit } = useWeb3forms({
-        apikey: "6LdwrtUgAAAAAFO1Z21iOSBqjrAuGAMNOY4dyyVO",
+        apikey: "22b1ad2a-7d14-4c33-9ea0-9e5859f4309a",
         onSuccess: (successMessage, data) => {
             setTextColor("#1ce2c8")
             setShowText(successMessage)
