@@ -48,11 +48,19 @@ const Contact = () => {
     };
 
     const onSubmit = (data) => {
-        setShowRecaptcha(true);
+        if (data.name && data.email && data.message && data.subject) {
+            setTextColor("#868686");
+            setShowText("Loading . . . ");
+            setShowRecaptcha(true);
+        }
+        else {
+            setTextColor("#ff0000")
+            setShowText("***Fill all the fields and clear the recaptcha***")
+        }
     }
 
     const sendMessage = () => {
-        if (register.name && register.email && register.message && register.subject && verified) {
+        if (verified) {
             setTextColor("#868686");
             setShowText("Loading . . . ");
             submit({
@@ -64,7 +72,7 @@ const Contact = () => {
         }
         else {
             setTextColor("#ff0000")
-            setShowText("***Fill all the fields and clear the recaptcha***")
+            setShowText("***Complete the captcha and try again.***")
         }
     }
     const { submit } = useWeb3forms({
