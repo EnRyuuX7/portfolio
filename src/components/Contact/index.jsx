@@ -37,13 +37,11 @@ const ContactCards = ({ icon, type, value }) => (
 
 const Contact = () => {
     const [showRecaptcha, setShowRecaptcha] = useState(false);
-    const [verified, setVerified] = useState(false);
     const [showText, setShowText] = useState("");
     const [textColor, setTextColor] = useState("");
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onVerify = e => {
-        setVerified(true);
         sendMessage();
     };
 
@@ -60,6 +58,7 @@ const Contact = () => {
     }
 
     const sendMessage = () => {
+        console.log(register)
         submit({
             Name: register.name,
             Email: register.email,
