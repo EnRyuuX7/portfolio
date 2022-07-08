@@ -36,6 +36,7 @@ const ContactCards = ({ icon, type, value }) => (
 
 
 const Contact = () => {
+    const [showRecaptcha, setShowRecaptcha] = useState(false);
     const [verified, setVerified] = useState(false);
     const [showText, setShowText] = useState("");
     const [textColor, setTextColor] = useState("");
@@ -43,22 +44,27 @@ const Contact = () => {
 
     const onVerify = e => {
         setVerified(true);
+        sendMessage();
     };
 
-    const onSubmit = data => {
-        if (data.name && data.email && data.message && data.subject) {
+    const onSubmit = (data) => {
+        setShowRecaptcha(true);
+    }
+
+    const sendMessage = () => {
+        if (register.name && register.email && register.message && register.subject && verified) {
             setTextColor("#868686");
             setShowText("Loading . . . ");
             submit({
-                Name: data.name,
-                Email: data.email,
-                Subject: data.subject,
-                Message: data.message
+                Name: register.name,
+                Email: register.email,
+                Subject: register.subject,
+                Message: register.message
             })
         }
         else {
             setTextColor("#ff0000")
-            setShowText("***Fill all the fields***")
+            setShowText("***Fill all the fields and clear the recaptcha***")
         }
     }
     const { submit } = useWeb3forms({
@@ -76,7 +82,8 @@ const Contact = () => {
     useEffect(() => {
         setTimeout(() => {
             setShowText("")
-        }, 50000);
+            setShowRecaptcha(false);
+        }, 200000);
     }, [showText])
 
     return (
@@ -117,15 +124,17 @@ const Contact = () => {
                             </div>
                             <div className="row">
                                 <div className={`column ${styles.form__submit} `}><button className={`${styles.btn}`} id={styles.contact__submit}
-                                    type="submit" disabled={!verified}
+                                    type="submit"
                                 >Send Message</button>
                                     <p className={styles.contact__feedback} style={{ color: textColor }}>{showText}</p>
                                 </div>
                             </div>
-                            <Reaptcha
-                                sitekey="6LfZT9YgAAAAAPeJwbjkOR_v8Q4eLW6LisfuJSAW"
-                                onVerify={onVerify}
-                            />
+                            {showRecaptcha &&
+                                <Reaptcha
+                                    sitekey="6LfZT9YgAAAAAPeJwbjkOR_v8Q4eLW6LisfuJSAW"
+                                    onVerify={onVerify}
+                                />
+                            }
                         </form>
                     </div>
                     <div className="one-third column">
