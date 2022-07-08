@@ -112,9 +112,9 @@ $border-color_3: #dc3545;
                     border-color: $border-color_3 !important;
                 }
                 .contact__feedback {
-                    display: none;
-                    margin: 0;
-                    margin-top: 8px;
+                    display: inline-block;
+                    width: fit-content;
+                    margin-left: 2rem;
                 }
                 .contact__feedback.success {
                     color: $color_2;
@@ -189,12 +189,6 @@ $border-color_3: #dc3545;
                 }
             }
         }
-    }
-    .gap {
-        width: 96%;
-    }
-    .c__email {
-        margin-left: 4%;
     }
     .list__info {
         display: flex;
@@ -288,13 +282,6 @@ $border-color_3: #dc3545;
 
 @media (max-width: 1200px) {
     #contact {
-        .contact__section {
-            .contact__form {
-                .form__group {
-                    margin-bottom: 35px;
-                }
-            }
-        }
         #contact__message {
             min-width: unset !important;
         }
@@ -303,9 +290,6 @@ $border-color_3: #dc3545;
 @media (max-width: 990px) {
     #contact {
         .contact__section {
-            .contact__form {
-                margin-bottom: 45px;
-            }
             .contact__info {
                 padding-left: 0;
             }

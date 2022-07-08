@@ -5,6 +5,9 @@ import { FaUser } from "react-icons/fa"
 import { FaPhone } from "react-icons/fa"
 import { FaEnvelope } from "react-icons/fa";
 import ReactTooltip from 'react-tooltip';
+import useWeb3forms from "use-web3forms";
+import { useForm } from "react-hook-form";
+import { useEffect, useState } from "react";
 
 
 const ELink = ({ type, link }) => {
@@ -32,15 +35,43 @@ const ContactCards = ({ icon, type, value }) => (
 
 
 const Contact = () => {
+    const [showText, setShowText] = useState("");
+    const [textColor, setTextColor] = useState("");
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const onSubmit = data => {
+        if (data.name && data.email && data.message && data.subject) {
+            setTextColor("#868686");
+            setShowText("Loading . . . ");
+            submit({
+                Name: data.name,
+                Email: data.email,
+                Subject: data.subject,
+                Message: data.message
+            })
+        }
+        else {
+            setTextColor("#ff0000")
+            setShowText("***Fill all the fields***")
+        }
+    }
     const { submit } = useWeb3forms({
         apikey: "22b1ad2a-7d14-4c33-9ea0-9e5859f4309a",
         onSuccess: (successMessage, data) => {
-            console.log(successMessage, data)
+            setTextColor("#1ce2c8")
+            setShowText(successMessage)
         },
         onError: (errorMessage, data) => {
-            console.log(errorMessage, data)
+            setTextColor("#ff0000")
+            setShowText(errorMessage)
         },
     });
+
+    useEffect(() => {
+        setTimeout(() => {
+            setShowText("")
+        }, 50000);
+    }, [showText])
+
     return (
         <section id="contact" className={styles.contact}>
 
@@ -51,39 +82,37 @@ const Contact = () => {
             <div className={styles.contact__section}>
                 <div className="row">
                     <div className="two-thirds column">
-                        {/* <form className={styles.contact__form} id={styles.contact__form}
-                        action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="22b1ad2a-7d14-4c33-9ea0-9e5859f4309a" />
-                        <input type="hidden" name="subject" value="New Message from Portfolio" />
-                        <input type="checkbox" name="botcheck" id="" /> */}
                         <form className={styles.contact__form} id={styles.contact__form}
-                            action="#">
+                            onSubmit={handleSubmit(onSubmit)}>
 
                             <h4 className={styles.content__title}>Message Me</h4>
                             <div className="row">
-                                <div className={styles.group}>
-                                    <div className="one-half column">
-                                        <div className={`${styles.form__group} ${styles.gap}`}><input className={styles.form__control} id={styles.contact__name} type="text"
-                                            name="name" placeholder="Name" required="" /></div>
-                                    </div>
-                                    <div className="one-half column">
-                                        <div className={`${styles.form__group} ${styles.gap} ${styles.c__email}`}><input className={styles.form__control} id={styles.contact__email}
-                                            type="email" name="email" placeholder="Email" required="" /></div>
-                                    </div>
+
+                                <div className="one-half column">
+                                    <div className={`${styles.form__group}`}>
+                                        <input className={styles.form__control} id={styles.contact__name} type="text"
+                                            name="name" placeholder="Name" {...register("name")} /></div>
                                 </div>
-                                <div className={`column ${styles.form__group} nomargin`}><input className={styles.form__control} id={styles.contact__subject} type="text"
-                                    name="subject" placeholder="Subject" autoComplete="off" required="" /></div>
-                                <div className={`column ${styles.form__group} nomargin`}><textarea className={styles.form__control} id={styles.contact__message}
-                                    name="message" placeholder="Message" rows="5" required=""></textarea></div>
-                                <div className={`column ${styles.form__submit} nomargin`}><button className={`${styles.btn}`} id={styles.contact__submit}
-                                    data-tip="Not Implemented yet Sorry!!"
-                                    onClick={(e) => {
-                                        submit({
-                                            hello: "world",
-                                            isWorking: "Yesss!!!",
-                                        });
-                                    }} >Send Message</button>
-                                    <p className={styles.contact__feedback}></p>
+                                <div className="one-half column">
+                                    <div className={`${styles.form__group}`}>
+                                        <input className={styles.form__control} id={styles.contact__email}
+                                            type="email" name="email" placeholder="Email" {...register("email")} /></div>
+                                </div>
+
+                            </div>
+                            <div className="row">
+                                <div className={`column ${styles.form__group}`}><input className={styles.form__control} id={styles.contact__subject} type="text"
+                                    name="subject" placeholder="Subject" autoComplete="off" {...register("subject")} /></div>
+                            </div>
+                            <div className="row">
+                                <div className={`column ${styles.form__group} `}><textarea className={styles.form__control} id={styles.contact__message}
+                                    name="message" placeholder="Message" rows="5" {...register("message")}></textarea></div>
+                            </div>
+                            <div className="row">
+                                <div className={`column ${styles.form__submit} `}><button className={`${styles.btn}`} id={styles.contact__submit}
+                                    type="submit"
+                                >Send Message</button>
+                                    <p className={styles.contact__feedback} style={{ color: textColor }}>{showText}</p>
                                 </div>
                             </div>
                         </form>
