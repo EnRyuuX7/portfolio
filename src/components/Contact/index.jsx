@@ -40,6 +40,7 @@ const Contact = () => {
         subject: "",
         message: "",
     });
+    const [isSubmitted, setIsSubmitted] = useState(false);
     const [showRecaptcha, setShowRecaptcha] = useState(false);
     const [showText, setShowText] = useState("");
     const [textColor, setTextColor] = useState("");
@@ -59,20 +60,25 @@ const Contact = () => {
     };
 
     const onSubmit = (data) => {
-        setFormData({
-            name: data.name,
-            email: data.email,
-            subject: data.subject,
-            message: data.message,
-        });
-
-        if (data.name && data.email && data.message && data.subject) {
-            setTextColor("#868686");
-            setShowText("Loading . . . ");
-            setShowRecaptcha(true);
+        if (isSubmitted) {
+            setTextColor("#1ce2c8");
+            setShowText("Email is alreadt Sent.     Thank you for contacting me. I will get back to you soon.");
         } else {
-            setTextColor("#ff0000");
-            setShowText("***Fill all the fields and clear the recaptcha***");
+            setFormData({
+                name: data.name,
+                email: data.email,
+                subject: data.subject,
+                message: data.message,
+            });
+
+            if (data.name && data.email && data.message && data.subject) {
+                setTextColor("#868686");
+                setShowText("Loading . . . ");
+                setShowRecaptcha(true);
+            } else {
+                setTextColor("#ff0000");
+                setShowText("***Fill all the fields and clear the recaptcha***");
+            }
         }
     };
 
@@ -81,10 +87,13 @@ const Contact = () => {
         onSuccess: (successMessage, data) => {
             setTextColor("#1ce2c8");
             setShowText(successMessage);
+            setIsSubmitted(true);
+            console.log(isSubmitted);
         },
         onError: (errorMessage, data) => {
             setTextColor("#ff0000");
             setShowText(errorMessage);
+            setIsSubmitted(false);
         },
     });
 
