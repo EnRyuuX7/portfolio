@@ -123,7 +123,7 @@ const Contact = () => {
                                 </div>
                             </div>
                             <Reaptcha
-                                sitekey="6LdeH9UgAAAAAMShDGITyg3u735hTdTnASe3LucD"
+                                sitekey="6LfZT9YgAAAAAPeJwbjkOR_v8Q4eLW6LisfuJSAW"
                                 onVerify={onVerify}
                             />
                         </form>
