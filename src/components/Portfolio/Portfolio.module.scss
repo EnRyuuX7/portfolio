@@ -127,6 +127,72 @@ $border-color_2: red;
     }
 }
 
+.popup__modal {
+    max-width: 60%;
+    background: #ffffff;
+    position: relative;
+    margin: 0 auto;
+    border: 1px solid #ffffff;
+    .popup__media {
+        position: relative;
+    }
+    img {
+        vertical-align: bottom;
+    }
+    .popup__descriptionBox {
+        padding: 1.8rem 3.6rem 3rem;
+    }
+    .popup__categories {
+        font-size: 1rem;
+        line-height: 1.8rem;
+        text-transform: lowercase;
+        letter-spacing: 0.1rem;
+        .popup__categoryChip {
+            background: #c4c4c4;
+            padding: 0.2rem 0.8rem;
+            margin: 0 0.5rem;
+            border-radius: 50px;
+        }
+    }
+    .popup__linkBox {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        background: #000000;
+        a {
+            font-family: "poppins-bold", sans-serif;
+            font-size: 1.2rem;
+            line-height: 6rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            margin: 0;
+            width: 50%;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            &:first-child {
+                border-right: 1px solid rgba(200, 200, 200, 0.1);
+            }
+            &:hover {
+                background: #cc005f;
+                border: none;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .popup__modal {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+
 #toggle__checkbox {
     display: none;
     &:checked {
@@ -160,9 +226,6 @@ $border-color_2: red;
 .toggleCell {
     left: 0% !important;
 }
-.mfp-hide {
-    display: none;
-}
 @media only screen and (max-width: 1024px) {
     #portfolio {
         .folio__title {
@@ -188,4 +251,19 @@ $border-color_2: red;
             padding: 5%;
         }
     }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        -webkit-transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.popup__modal {
+    -webkit-animation: slideIn 0.7s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
 }

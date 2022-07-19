@@ -17,7 +17,7 @@ const ELink = ({ type, link }) => {
 const ContactInfo = [
     { icon: <FaUser />, type: "Name", value: "Abhishek Pandey" },
     { icon: <FaLocationArrow />, type: "Location", value: "Banasthali, Kathmandu, Nepal" },
-    { icon: <FaPhone />, type: "Call Me", value: <ELink type="tel" link="+9779861215345" /> },
+    // { icon: <FaPhone />, type: "Call Me", value: <ELink type="tel" link="+" /> },
     { icon: <FaEnvelope />, type: "Email Me", value: <ELink type="mailto" link="emailabhishekp@gmail.com" /> },
 ];
 

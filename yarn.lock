@@ -1286,9 +1286,9 @@ minimatch@^3.0.4, minimatch@^3.1.2:
     brace-expansion "^1.1.7"
 
 minimist@^1.2.0:
-  version "1.2.5"
-  resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz"
-  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+  version "1.2.6"
+  resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz"
+  integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
 minipass@^3.0.0:
   version "3.1.6"
@@ -1571,7 +1571,7 @@ react-dom@17.0.2:
 
 react-hook-form@^7.33.1:
   version "7.33.1"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.33.1.tgz#8c4410e3420788d3b804d62cc4c142915c2e46d0"
+  resolved "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.33.1.tgz"
   integrity sha512-ydTfTxEJdvgjCZBj5DDXRc58oTEfnFupEwwTAQ9FSKzykEJkX+3CiAkGtAMiZG7IPWHuzgT6AOBfogiKhUvKgg==
 
 react-icons@^4.3.1:
@@ -1600,6 +1600,11 @@ react@17.0.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
+reactjs-popup@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/reactjs-popup/-/reactjs-popup-2.0.5.tgz#588a74966bb126699429d739948e3448d7771eac"
+  integrity sha512-b5hv9a6aGsHEHXFAgPO5s1Jw1eSkopueyUVxQewGdLgqk2eW0IVXZrPRpHR629YcgIpC2oxtX8OOZ8a7bQJbxA==
+
 readable-stream@^3.6.0:
   version "3.6.0"
   resolved "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.0.tgz"
@@ -1618,7 +1623,7 @@ readdirp@~3.6.0:
 
 reaptcha@^1.12.1:
   version "1.12.1"
-  resolved "https://registry.yarnpkg.com/reaptcha/-/reaptcha-1.12.1.tgz#1993d2f2ed52669188f16e3210afbf89b7221211"
+  resolved "https://registry.npmjs.org/reaptcha/-/reaptcha-1.12.1.tgz"
   integrity sha512-zoppfGKHmo8x4PBmSrIQYQOGgVp1e8wMhr6KbwAdbQ76rSky1DcDCXLWRtBg7HGXn2hw+o+0hknafMB0rnrzZQ==
 
 regenerator-runtime@^0.13.4:
@@ -1938,7 +1943,7 @@ use-subscription@1.5.1:
 
 use-web3forms@^1.2.1:
   version "1.2.1"
-  resolved "https://registry.yarnpkg.com/use-web3forms/-/use-web3forms-1.2.1.tgz#0aef764be8d1b15820a04149e531793d4d111e31"
+  resolved "https://registry.npmjs.org/use-web3forms/-/use-web3forms-1.2.1.tgz"
   integrity sha512-VP2QGuFNJ/XRJ2rizTzSFQv7LsYw+VkxUpiNzIbLAo0fag0TfxE3DsTEplhAsA5/Umu4of2Oxfj+9zPjow+mgg==
 
 util-deprecate@^1.0.1:
