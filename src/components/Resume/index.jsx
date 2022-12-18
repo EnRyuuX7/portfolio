@@ -25,8 +25,8 @@ const Education = [
     {
         achievement: "B.Sc CSIT",
         institute: "Deerwalk Institute of Technology",
-        duration: "2017 - Current",
-        description: "Final year 8th semester"
+        duration: "2017 - 2022",
+        description: ""
     },
     {
         achievement: "+2",
