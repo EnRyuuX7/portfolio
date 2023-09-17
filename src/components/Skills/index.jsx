@@ -77,6 +77,7 @@ const Skills = () => {
           <div className={styles.skillTable}>
             {data?.map((item, index) => (
               <SkillCard
+                key={index}
                 title={item.title}
                 desc={item.desc}
                 dataDesc={item.dataDesc}
