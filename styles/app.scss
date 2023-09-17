@@ -1,11 +1,11 @@
 // n is number of stars required
 @function multiple-box-shadow($n) {
-    $value: "#{random(2000)}px #{random(2000)}px #FFF";
-    @for $i from 2 through $n {
-        $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
-    }
+  $value: "#{random(2000)}px #{random(2000)}px #FFF";
+  @for $i from 2 through $n {
+    $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
+  }
 
-    @return unquote($value);
+  @return unquote($value);
 }
 
 $shadows-small: multiple-box-shadow(700);
@@ -13,65 +13,69 @@ $shadows-medium: multiple-box-shadow(200);
 $shadows-big: multiple-box-shadow(100);
 
 #stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;
+  position: relative;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 3500px;
     width: 1px;
     height: 1px;
     background: transparent;
     box-shadow: $shadows-small;
-    animation: animStar 50s linear infinite;
-    &:after {
-        content: " ";
-        position: absolute;
-        top: 3500px;
-        width: 1px;
-        height: 1px;
-        background: transparent;
-        box-shadow: $shadows-small;
-    }
+  }
 }
 
 #stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+  animation: animStar 100s linear infinite;
+  position: relative;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
     width: 2px;
     height: 2px;
     background: transparent;
     box-shadow: $shadows-medium;
-    animation: animStar 100s linear infinite;
-
-    &:after {
-        content: " ";
-        position: absolute;
-        top: 2000px;
-        width: 2px;
-        height: 2px;
-        background: transparent;
-        box-shadow: $shadows-medium;
-    }
+  }
 }
 
 #stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  animation: animStar 150s linear infinite;
+  position: relative;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 5000px;
     width: 3px;
     height: 3px;
     background: transparent;
     box-shadow: $shadows-big;
-    animation: animStar 150s linear infinite;
-
-    &:after {
-        content: " ";
-        position: absolute;
-        top: 5000px;
-        width: 3px;
-        height: 3px;
-        background: transparent;
-        box-shadow: $shadows-big;
-    }
+  }
 }
 
 @keyframes animStar {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(-2000px);
-    }
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
 }
 
 /* Title and info css Section
@@ -85,186 +89,186 @@ $background-color_2: #fff;
 $background-color_3: #101010;
 
 @-webkit-keyframes barAnimation {
-    from {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-    to {
-        -webkit-transform: translateX(75px);
-        transform: translateX(75px);
-    }
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(75px);
+    transform: translateX(75px);
+  }
 }
 @keyframes barAnimation {
-    from {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-    to {
-        -webkit-transform: translateX(75px);
-        transform: translateX(75px);
-    }
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(75px);
+    transform: translateX(75px);
+  }
 }
 .section__intro {
-    h1 {
-        text-align: center;
-        font-family: $font-family_1;
-        font-size: 3.6rem;
-        color: $color_1;
-        line-height: 1.25;
-        margin-bottom: 1.2rem;
-    }
-    h5 {
-        text-align: center;
-        color: $color_2;
-        font-size: 1.6rem;
-        line-height: 1.875;
-        margin-bottom: 0.3rem;
-        letter-spacing: 0.4rem;
-    }
+  h1 {
+    text-align: center;
+    font-family: $font-family_1;
+    font-size: 3.6rem;
+    color: $color_1;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+  }
+  h5 {
+    text-align: center;
+    color: $color_2;
+    font-size: 1.6rem;
+    line-height: 1.875;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.4rem;
+  }
 }
 
 .section__heading {
-    margin-bottom: 50px;
-    text-align: left;
-    > .section__title {
-        display: inline-block;
-        font-size: 38px;
-        font-weight: 700;
-        letter-spacing: -0.25px;
-        line-height: 100%;
-        margin-bottom: 0;
-        position: relative;
-        z-index: 4;
-    }
-    > .section__description {
-        color: $color_3;
-        font-size: 15px;
-        margin-bottom: 17px;
-    }
+  margin-bottom: 50px;
+  text-align: left;
+  > .section__title {
+    display: inline-block;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -0.25px;
+    line-height: 100%;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 4;
+  }
+  > .section__description {
+    color: $color_3;
+    font-size: 15px;
+    margin-bottom: 17px;
+  }
 }
 .section__heading.page__heading {
-    text-align: center;
-    > .section__title {
-        font-size: 46px;
-        margin-bottom: 37px;
+  text-align: center;
+  > .section__title {
+    font-size: 46px;
+    margin-bottom: 37px;
+  }
+  > .animated__bar {
+    background-color: $background-color_2;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 0;
+    margin: 0 auto 0 auto;
+    position: relative;
+    right: 0;
+    width: 75px;
+    &:after {
+      -webkit-animation-duration: 3s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-name: barAnimation;
+      -webkit-animation-timing-function: linear;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-name: barAnimation;
+      animation-timing-function: linear;
+      background-color: $background-color_3;
+      content: "";
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 4px;
+      left: 0;
     }
-    > .animated__bar {
-        background-color: $background-color_2;
-        content: "";
-        display: block;
-        height: 4px;
-        left: 0;
-        margin: 0 auto 0 auto;
-        position: relative;
-        right: 0;
-        width: 75px;
-        &:after {
-            -webkit-animation-duration: 3s;
-            -webkit-animation-iteration-count: infinite;
-            -webkit-animation-name: barAnimation;
-            -webkit-animation-timing-function: linear;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            animation-name: barAnimation;
-            animation-timing-function: linear;
-            background-color: $background-color_3;
-            content: "";
-            height: 100%;
-            position: absolute;
-            top: 0;
-            width: 4px;
-            left: 0;
-        }
-        &:before {
-            -webkit-animation-duration: 3s;
-            -webkit-animation-iteration-count: infinite;
-            -webkit-animation-name: barAnimation;
-            -webkit-animation-timing-function: linear;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            animation-name: barAnimation;
-            animation-timing-function: linear;
-            background-color: $background-color_3;
-            content: "";
-            height: 100%;
-            position: absolute;
-            top: 0;
-            width: 4px;
-            left: 8px;
-        }
+    &:before {
+      -webkit-animation-duration: 3s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-name: barAnimation;
+      -webkit-animation-timing-function: linear;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-name: barAnimation;
+      animation-timing-function: linear;
+      background-color: $background-color_3;
+      content: "";
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 4px;
+      left: 8px;
     }
+  }
 }
 @media (max-width: 991.98px) {
-    .section__heading {
-        > .section__title {
-            font-size: 36px;
-        }
-        > .section__description {
-            font-size: 14px;
-        }
+  .section__heading {
+    > .section__title {
+      font-size: 36px;
     }
-    .section__heading.page__heading {
-        > .section__title {
-            font-size: 42px;
-        }
+    > .section__description {
+      font-size: 14px;
     }
+  }
+  .section__heading.page__heading {
+    > .section__title {
+      font-size: 42px;
+    }
+  }
 }
 @media (max-width: 767.98px) {
-    .section__heading {
-        > .section__description {
-            font-size: 14px;
-        }
+  .section__heading {
+    > .section__description {
+      font-size: 14px;
     }
+  }
 }
 @media (max-width: 575.98px) {
-    .section__heading {
-        > .section__title {
-            font-size: 34px;
-        }
+  .section__heading {
+    > .section__title {
+      font-size: 34px;
     }
-    .section__heading.page__heading {
-        > .section__title {
-            font-size: 36px;
-        }
+  }
+  .section__heading.page__heading {
+    > .section__title {
+      font-size: 36px;
     }
+  }
 }
 
 @-moz-keyframes pop {
-    0% {
-        transform: translateY(100%);
-    }
+  0% {
+    transform: translateY(100%);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @-webkit-keyframes pop {
-    0% {
-        transform: translateY(100%);
-    }
+  0% {
+    transform: translateY(100%);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @-o-keyframes pop {
-    0% {
-        transform: translateY(100%);
-    }
+  0% {
+    transform: translateY(100%);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes pop {
-    0% {
-        transform: translateY(100%);
-    }
+  0% {
+    transform: translateY(100%);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }

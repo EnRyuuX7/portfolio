@@ -83,7 +83,7 @@ const FolioCard = ({
   return (
     <div className={`one-half column ${styles.folio__item}`}>
       <div className={styles.item__wrap}>
-        <Image src={image} alt={title} className="centered" />
+        <Image src={image} alt={title} className="centered" layout="fill" />
       </div>
       <Popup
         trigger={

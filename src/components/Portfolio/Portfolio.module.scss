@@ -57,10 +57,12 @@ $border-color_2: red;
     &:nth-child(2n + 1) {
       margin-left: 0;
     }
+    .item__wrap {
+      height: 50vh;
+    }
     img {
       vertical-align: middle;
       object-position: center;
-      height: 50vh;
       transition: all 0.5s ease-in-out;
     }
     &:hover {

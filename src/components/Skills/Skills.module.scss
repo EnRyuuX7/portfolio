@@ -2,150 +2,168 @@ $color1: #1ce2c8;
 $color2: #cc005f;
 
 $gradient: (
-    1: "#f3f9a6 50%, #cbc634 100%",
-    2: "#ff616d 50%, #ffc171 100%",
-    3: "#37cfdc 50%, #5a88e5 100%",
-    4: "#58ac30 50%, #a7df62 100%",
-    5: "#3771dc 50%, #785ae5 100%",
-    6: "#785ae5 50%, #f3f9a6 100%",
-    7: "#a7df62 50%, #3771dc 100%",
-    8: "#5a88e5 50%, #58ac30 100%",
-    9: "#ffc171 50%, #37cfdc 100%",
-    10: "#cbc634 50%, #ff616d 100%",
+  1: "#f3f9a6 50%, #cbc634 100%",
+  2: "#ff616d 50%, #ffc171 100%",
+  3: "#37cfdc 50%, #5a88e5 100%",
+  4: "#58ac30 50%, #a7df62 100%",
+  5: "#3771dc 50%, #785ae5 100%",
+  6: "#785ae5 50%, #f3f9a6 100%",
+  7: "#a7df62 50%, #3771dc 100%",
+  8: "#5a88e5 50%, #58ac30 100%",
+  9: "#ffc171 50%, #37cfdc 100%",
+  10: "#cbc634 50%, #ff616d 100%",
 );
 
-@each $i, $value in $gradient {
-    $color: unquote($value);
-    .gra#{$i} {
-        background: linear-gradient(var(--angle), $color);
-        animation: spins 4s linear infinite;
-        .title,
-        .description {
-            background: -webkit-linear-gradient(var(--angle), $color);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        $i: $i + 1;
+$gradient2: (
+  1: "#00ff87 50%, #60efff 100%",
+  2: "#07f49e 50%, #60efff 100%",
+  3: "#6ef195 50%, #00e3fd 100%",
+  4: "#f3f520 50%, #f3696e 100%",
+  5: "#37cfdc 50%, #5a88e5 100%",
+  6: "#9bf8f4 50%, #6f7bf7 100%",
+  7: "#ffa585 50%, #ffeda0 100%",
+  8: "#9bf8f4 50%, #6f7bf7 100%",
+  9: "#96c6ea 50%, #07f49e 100%",
+  10: "#d397fa 50%, #8364e8 100%",
+  11: "#95ecb0 50%, #f3f98a 100%",
+  12: "#f292ed 50%, #f36364 100%",
+  13: "#ddb4f6 50%, #2278fb 100%",
+  14: "#f36364 50%, #f3f98a 100%",
+  15: "#ea98da 50%, #5b6cf9 100%",
+);
+
+@each $i, $value in $gradient2 {
+  $color: unquote($value);
+  .gra#{$i} {
+    background: linear-gradient(var(--angle), $color);
+    animation: spins 4s linear infinite;
+    .title,
+    .description {
+      background: -webkit-linear-gradient(var(--angle), $color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+    $i: $i + 1;
+  }
 }
 #skills {
-    padding: 0 0 5rem 0;
-    .section__description {
-        padding-top: 80px;
-    }
-    .section__title {
-        text-align: center;
-    }
+  padding: 0 0 5rem 0;
+  .section__description {
+    padding-top: 80px;
+  }
+  .section__title {
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 412px) {
-    #skills {
-        padding: 50% 0 15% 0;
-    }
+  #skills {
+    padding: 50% 0 15% 0;
+  }
 }
 
 .skillTable {
-    --angle: 0deg;
-    display: grid;
-    grid-template-columns: repeat(5, 200px);
-    grid-template-rows: repeat(2, 100px);
-    grid-gap: 10px;
-    margin: auto;
-    max-width: 1200px;
-    justify-content: center;
-    animation: spins 1s linear infinite;
+  --angle: 0deg;
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-template-rows: repeat(2, 100px);
+  grid-gap: 10px;
+  margin: auto;
+  max-width: 1200px;
+  justify-content: center;
+  animation: spins 1s linear infinite;
 }
 
 .skillElement {
-    padding: 4px;
-    position: relative;
-    z-index: 1;
-    cursor: default;
-    transition: all 0.3s ease;
+  padding: 4px;
+  position: relative;
+  z-index: 1;
+  cursor: default;
+  transition: all 0.3s ease;
+  .skillElementInner {
+    background: #000000;
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+  }
+  .title {
+    font: 700 34px/1.3 "Poppins", sans-serif;
+    margin: 0.3em 0 0;
+    transition: 0.8s ease 600ms;
+  }
+  .description {
+    font: 500 12px "Poppins", sans-serif;
+    margin-top: -0.2em;
+  }
+  &:hover {
+    transform: scale(1.05);
+    z-index: 3;
     .skillElementInner {
-        background: #000000;
-        padding: 10px 15px;
-        width: calc(100% - 30px);
-        height: calc(100% - 20px);
-        transition: inherit;
+      background: transparent;
     }
-    .title {
-        font: 700 34px/1.3 "Poppins", sans-serif;
-        margin: 0.3em 0 0;
-        transition: 0.8s ease 600ms;
-    }
+    .title,
     .description {
-        font: 500 12px "Poppins", sans-serif;
-        margin-top: -0.2em;
+      -webkit-text-fill-color: #222;
     }
-    &:hover {
-        transform: scale(1.05);
-        z-index: 3;
-        .skillElementInner {
-            background: transparent;
-        }
-        .title,
-        .description {
-            -webkit-text-fill-color: #222;
-        }
-        &:after {
-            top: 105%;
-            opacity: 1;
-        }
+    &:after {
+      top: 105%;
+      opacity: 1;
     }
+  }
 }
 
 a.skillElement {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @media (max-width: 1290px) {
-    .skillTable {
-        grid-template-columns: repeat(4, 200px);
-        grid-template-rows: repeat(4, 100px);
-    }
+  .skillTable {
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(4, 100px);
+  }
 }
 
 @media (max-width: 1000px) {
-    .skillTable {
-        grid-template-columns: repeat(3, 200px);
-        grid-template-rows: repeat(4, 100px);
-    }
+  .skillTable {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(4, 100px);
+  }
 }
 
 @media (max-width: 780px) {
-    .skillTable {
-        grid-template-columns: repeat(2, 200px);
-        grid-template-rows: repeat(5, 100px);
-    }
+  .skillTable {
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(5, 100px);
+  }
 }
 
 @media (max-width: 412px) {
-    .skillTable {
-        grid-template-columns: repeat(2, 150px);
-        grid-template-rows: repeat(5, 100px);
-    }
-    .title {
-        font-size: 18px;
-    }
+  .skillTable {
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(5, 100px);
+  }
+  .title {
+    font-size: 18px;
+  }
 }
 
 .emptySpacer {
-    &1 {
-        grid-column: 3 / span 4;
-        grid-row: 1;
-    }
-    &2 {
-        grid-column: 1;
-        grid-row: 4;
-    }
+  &1 {
+    grid-column: 3 / span 4;
+    grid-row: 1;
+  }
+  &2 {
+    grid-column: 1;
+    grid-row: 4;
+  }
 }
 
 $j: 0;
 @keyframes spins {
-    @for $i from 0 through 100 {
-        #{$i}% {
-            --angle: #{$j}deg;
-        }
-        $j: $j + 3.6;
+  @for $i from 0 through 100 {
+    #{$i}% {
+      --angle: #{$j}deg;
     }
+    $j: $j + 3.6;
+  }
 }
