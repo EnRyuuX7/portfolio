@@ -1,0 +1,214 @@
+#intro {
+  padding: 0 0 5rem 0;
+  height: 64vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#intro .intro__title {
+  max-width: 100%;
+  width: 100%;
+  align-self: center;
+  transform: translateY(-50px);
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+#intro .intro__title span {
+  display: inline-block;
+  font-size: 10vmin;
+  color: #efefef;
+  width: 100%;
+  text-transform: uppercase;
+  animation: byBottom 1s ease both;
+  font-weight: 600;
+  letter-spacing: 0.25vw;
+}
+
+#intro .intro__title span:last-child {
+  font-size: 1rem;
+  animation: byBottom 1s 0.25s ease both;
+}
+
+#intro .intro__title span a {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5rem;
+  text-decoration: none;
+  color: #1ce2c8;
+}
+
+#intro .intro__title span a::after {
+  content: "";
+  height: 2px;
+  background-color: #1ce2c8;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  animation: linkAfter 0.5s 1s ease both;
+}
+
+#intro .intro__title .intro__gitLink {
+  margin: 0%;
+  padding: 0%;
+}
+
+#intro .intro__social {
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 80px;
+  font-size: 3.3rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 580px) {
+  #intro .intro__social {
+    top: 0px;
+  }
+}
+
+#intro .intro__social li {
+  display: inline-block;
+  margin: 0 20px;
+  padding: 0;
+}
+
+#intro .intro__social li a {
+  color: #ffffff;
+}
+
+#intro .intro__social li a:visited {
+  color: #ffffff;
+}
+
+#intro .intro__social li a:hover {
+  color: #cc005f;
+}
+
+#intro .intro__social li a:focus {
+  color: #cc005f;
+}
+
+#intro .intro__social a {
+  padding: 15px 20px;
+}
+
+@media only screen and (max-width: 580px) {
+  #intro {
+    padding: 45% 0 10% 0;
+  }
+  .intro__social {
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .intro__content h1 {
+    font-size: 7.6rem;
+  }
+  .intro__social {
+    font-size: 3rem;
+  }
+  .intro__social li {
+    margin: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .intro__social {
+    font-size: 2.5rem;
+  }
+  .intro__social li {
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .intro__social {
+    font-size: 2.4rem;
+  }
+}
+
+@-moz-keyframes byBottom {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes byBottom {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-o-keyframes byBottom {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes byBottom {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes linkAfter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
+}
+
+@-webkit-keyframes linkAfter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
+}
+
+@-o-keyframes linkAfter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
+}
+
+@keyframes linkAfter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  #intro {
+    padding: 40% 0 10% 0;
+  }
+}

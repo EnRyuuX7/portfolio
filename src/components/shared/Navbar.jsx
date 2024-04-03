@@ -6,13 +6,26 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={`${styles.navbar__button} ${toggleMenu && styles.navbar__open}`} onClick={() => {
-        setMenu(prev => !prev)
-      }}>
+      <div
+        className={`${styles.navbar__button} ${
+          toggleMenu && styles.navbar__open
+        }`}
+        onClick={() => {
+          setMenu((prev) => !prev);
+        }}
+      >
         <div className={styles.navbar__buttonIcon}></div>
       </div>
-      <div className={`${styles.navbar__wrapper} ${toggleMenu && styles.navbar__show}`}>
-        <ul className={`${styles.navbar__items} ${toggleMenu && styles.navbar__show}`}>
+      <div
+        className={`${styles.navbar__wrapper} ${
+          toggleMenu && styles.navbar__show
+        }`}
+      >
+        <ul
+          className={`${styles.navbar__items} ${
+            toggleMenu && styles.navbar__show
+          }`}
+        >
           <li>
             <a href="#about">About</a>
           </li>
@@ -28,8 +41,7 @@ const Navbar = () => {
         </ul>
       </div>
     </nav>
-
   );
-}
+};
 
 export default Navbar;

@@ -28,7 +28,7 @@ const ContactInfo = [
 
 const ContactCards = ({ icon, type, value }) => (
   <li>
-    <div className={` ${styles.media} align-items-center`}>
+    <div className={`${styles.media} align-items-center`}>
       <span className={styles.info__icon}>{icon}</span>
       <div className={` ${styles.media__body} ${styles.info__details}`}>
         <h6 className={styles.info__type}>{type}</h6>

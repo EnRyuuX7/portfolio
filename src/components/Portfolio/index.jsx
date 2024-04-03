@@ -8,13 +8,41 @@ const overlayStyle = { background: "rgba(0, 0, 0, 0.404)" };
 
 const items = [
   {
-    link: "https://en-ryuu.github.io/",
-    title: "Generative Art Using p5.js",
-    type: "Graphic Design",
-    image: "/design.jpg",
+    link: "https://spacefloatmusic.com/",
+    title: "Space Float Music",
+    type: "Web Development",
+    image: "/spacefloat.png",
     description:
-      "An interactive web-app made using HTML, CSS, JS (jQuery, p5.js, VanillaJS) where the user can create and learn about generative art. This website features a sketch named Weave.js made from scratch using 3 different concepts (Kaleidoscope, perlin noise and bezier curves) which generates unique and random symmetrical generative art with a huge range of customization option",
-    categories: ["p5.js", "vanillaJS", "html", "css", "generativeArt"],
+      "A website with authentication and admin panel for Space Float which is a revolutionary platform that combines blockchain technology and artistic expression to provide musicians and their fans with the opportunity to own and sell music royalties. It aims to transform music tracks into liquid assets, empowering talented artists and engaging a vibrant community of fans. The website represents a beacon of hope within the music industry, challenging traditional gatekeepers and championing the democratization of music.",
+    categories: [
+      "Next-14",
+      "Postgres",
+      "Prisma",
+      "Next-auth",
+      "Typescript",
+      "Chakra-ui",
+      "react-query",
+      "s3",
+      "nginx",
+    ],
+  },
+  {
+    link: "https://tdm-ten.vercel.app/",
+    title: "TDM Website",
+    type: "Web Development",
+    image: "/tdm.png",
+    description:
+      "A interactive and animated website for Tempered Digital Music(TDM) Initiative which is a tech-driven global recording label, music distributor, and marketer leveraging in-house algorithms and machine learning.",
+    categories: ["HTML", "SCSS", "JS", "GSAP", "Web3-Forms"],
+  },
+  {
+    link: "https://www.westwardconstruction.com",
+    title: "Westward Construction",
+    type: "Web Design",
+    image: "/westward.png",
+    description:
+      "A functional static animated website for Westward Construction Ltd, a leading construction company based in the UK. The website showcases the company's expertise in delivering exceptional quality and unmatched craftsmanship in architectural construction projects.",
+    categories: ["HTML", "SCSS", "JS", "GSAP", "Web3-Forms"],
   },
   {
     link: "https://lostravens.com",
@@ -24,6 +52,15 @@ const items = [
     description:
       "A resume for the record label ”Lost Ravens” that provides the essential information to showcase the artist’s releases, discography, press releases,etc. Including signing up for newsletters and releases.",
     categories: ["html", "css", "javaScript", "jQuery", "figma", "photoshop"],
+  },
+  {
+    link: "https://en-ryuu.github.io/",
+    title: "Generative Art Using p5.js",
+    type: "Graphic Design",
+    image: "/design.jpg",
+    description:
+      "An interactive web-app made using HTML, CSS, JS (jQuery, p5.js, VanillaJS) where the user can create and learn about generative art. This website features a sketch named Weave.js made from scratch using 3 different concepts (Kaleidoscope, perlin noise and bezier curves) which generates unique and random symmetrical generative art with a huge range of customization option",
+    categories: ["p5.js", "vanillaJS", "html", "css", "generativeArt"],
   },
   {
     link: "https://github.com/EnRyuuX7/discord-clone",
@@ -83,7 +120,13 @@ const FolioCard = ({
   return (
     <div className={`one-half column ${styles.folio__item}`}>
       <div className={styles.item__wrap}>
-        <Image src={image} alt={title} className="centered" layout="fill" />
+        <Image
+          src={image}
+          alt={title}
+          className="centered"
+          layout="fill"
+          width={"100%"}
+        />
       </div>
       <Popup
         trigger={
@@ -113,8 +156,7 @@ const FolioCard = ({
               <Image
                 src={image}
                 alt={title}
-                height="200px"
-                width="200px"
+                layout="fill"
                 className="centered"
               />
             </div>

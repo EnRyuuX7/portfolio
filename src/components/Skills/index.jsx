@@ -30,6 +30,11 @@ const Skills = () => {
       dataDesc: "React",
     },
     {
+      title: "NextJs",
+      desc: "NextJs",
+      dataDesc: "Next",
+    },
+    {
       title: "Chakra",
       desc: "ChakraUI",
       dataDesc: "Chakra",
@@ -40,9 +45,14 @@ const Skills = () => {
       dataDesc: "react-query",
     },
     {
-      title: "NextJs",
-      desc: "NextJs",
-      dataDesc: "NextJs",
+      title: "Primsa",
+      desc: "Prisma",
+      dataDesc: "Prisma",
+    },
+    {
+      title: "Postgres",
+      desc: "Postgres",
+      dataDesc: "Postgres",
     },
     {
       title: "MUI",
@@ -59,7 +69,6 @@ const Skills = () => {
       desc: "p5.js",
       dataDesc: "p5.js",
     },
-
     {
       title: "Figma",
       desc: "Figma",
